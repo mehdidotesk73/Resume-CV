@@ -1,0 +1,399 @@
+% ============================================================
+%  Mehdi Eskandari-Ghadi — Curriculum Vitae
+%  Cumulative record — append only, never trim
+%  Compile: pdflatex cv.tex
+% ============================================================
+\documentclass[10pt, letterpaper]{article}
+
+% --- Packages -----------------------------------------------
+\usepackage[margin=0.75in, top=0.60in, bottom=0.60in]{geometry}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{xparse}
+
+% --- Hyperlink styling --------------------------------------
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+% --- Layout helpers -----------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Section header with full-width rule beneath
+\newcommand{\rsection}[1]{%
+  \vspace{10pt}%
+  {\large\bfseries\MakeUppercase{#1}}%
+  \vspace{1pt}%
+  \hrule height 0.8pt%
+  \vspace{5pt}%
+}
+
+% Job/role line: title left, date right
+\newcommand{\jobline}[2]{%
+  \vspace{5pt}%
+  \noindent\textbf{#1}\hfill\textbf{#2}\par%
+  \vspace{1pt}%
+}
+
+% Subline (institution, location — plain italic)
+\newcommand{\subline}[1]{%
+  \vspace{-1pt}%
+  \noindent\textit{#1}\par%
+  \vspace{1pt}%
+}
+
+% Bullet list settings
+\newenvironment{rlist}{%
+  \begin{itemize}[leftmargin=1.4em, itemsep=1pt, topsep=2pt, parsep=0pt]%
+}{%
+  \end{itemize}%
+}
+
+% Publication entry (hanging indent)
+\newenvironment{publist}{%
+  \begin{itemize}[leftmargin=1.4em, itemsep=4pt, topsep=2pt, parsep=0pt]%
+}{%
+  \end{itemize}%
+}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% --- Header -------------------------------------------------
+\begin{center}
+  {\LARGE\bfseries Mehdi Eskandari-Ghadi}\\[4pt]
+  mehdi.esk73@gmail.com\ $|$\ (303)378-1407\ $|$\ Salt Lake City, UT\\[2pt]
+  \href{http://www.linkedin.com/in/M-E-Ghadi}{www.linkedin.com/in/M-E-Ghadi}\ $|$\
+  Authorized to work in the U.S.\ $|$\ Sponsor not required
+\end{center}
+
+\vspace{4pt}
+
+% ============================================================
+\rsection{Education}
+
+\jobline{Civil Engineering Ph.D. (GPA 4.0)}{Boulder, CO}
+Engineering Science Focus \hfill 2016 -- 2021\\
+University of Colorado Boulder\\[2pt]
+Thesis: ``Effect of surface forces on the mechanics of adsorption-deformation in microporous media and in subcritical crack growth in reactive environment''\\
+Advisor: Yida Zhang, Ph.D.\\
+Area of study: Surface poromechanics, adsorption-deformation, fracture mechanics
+
+\vspace{6pt}
+\jobline{Bachelor of Science --- Civil Engineering (GPA 18.41/20)}{Tehran, Iran}
+University of Tehran \hfill 2012 -- 2016\\
+Ranked 5th among 113 undergraduate civil engineering students of the same entrance\\
+Average GPA of all students at the Civil Engineering Department: 15.02/20
+
+\vspace{6pt}
+\noindent\textbf{High School}\hfill Tehran, Iran\\
+Allameh Helli 3 (NODET) High School \hfill 2009 -- 2012\\
+Total GPA: 19.98/20
+
+% ============================================================
+\rsection{Selected Coursework}
+
+\vspace{2pt}
+\begin{tabular}{@{}p{8cm}l@{}}
+  Continuum Mechanics & A \\[1pt]
+  Computational Fluid Dynamics (CFD) & A \\[1pt]
+  Finite Element Method (FEM) & A \\[1pt]
+  Partial Differential \& Integral Equations & A \\[1pt]
+  Wave-based Methods and Applications & A \\[1pt]
+  Fourier Series \& Boundary Value Problems & A \\[1pt]
+  Complex Variables & A \\[1pt]
+  Soil Dynamics & A \\[1pt]
+  Soil Mechanics & A \\[1pt]
+  Structural Analysis II & 20/20 \\
+  Structural Analysis I & 19.14/20 \\[1pt]
+  Mechanics of Materials II & 18/20 \\[1pt]
+  Mechanics of Materials I & 18.5/20 \\[1pt]
+  Statics & 19.9/20 \\[1pt]
+  Ordinary Differential Equations & 20/20 \\[1pt]
+  Calculus II & 20/20 \\[1pt]
+  Calculus I & 20/20 \\[1pt]
+\end{tabular}
+
+% ============================================================
+\rsection{Honors and Certificates}
+
+\begin{rlist}
+  \item Engineering Mechanics Institute (EMI) Conference award: Runner up in the 2021 Poromechanics Committee Student Poster Competition
+  \item The Doctoral Assistantship for Excellence from University of Colorado, Boulder
+  \item Honorary Admission for Graduate Study from the University of Tehran
+  \item E.I.T. --- Civil FE passed
+  \item Ranked 183rd among approximately 250,000 participants in Iran's 2011 university entrance exam (Konkour)
+  \item Ranked among the top 10 percent in every semester during Bachelor's study
+  \item Top Researcher award in Allameh Helli 3 Seminar of Science and Technology
+  \item Member of the Secretariat Committee of the Allameh Helli 3 Seminar of Science and Technology
+  \item Certificate of Participation in RoboCup IRAN OPEN 2010 Competitions and Symposium
+  \item Certificate of Education in elementary MATLAB programming
+  \item TOEFL: 115/120 (Reading: 29, Listening: 30, Speaking: 28, Writing: 28)
+  \item GRE: Verbal 155/170, Quantitative 170/170, Analytical Writing 4.0/6.0
+\end{rlist}
+
+% ============================================================
+\rsection{Engineering Experience}
+
+\jobline{Reliability \& Standards Software Engineer II}{Jan 2025 -- Present}
+\subline{PacifiCorp}
+\begin{rlist} 
+  \item Built full-stack engineering workflows on the Palantir Foundry platform using TypeScript and Python, covering audit preparation, data management UIs, interdepartmental data collection, and automated queue-based processing pipelines.
+  \item Designed a git-inspired facility lifecycle management system within Foundry for branching, modifying, and publishing transmission facilities, with automated resource tracking, branch conflict resolution, and staged approval workflows.
+  \item Architected backend data pipelines in Python using Spark and Polars for large-scale ingestion, parsing, and health remediation of legacy spreadsheets, automating correction workflows and multi-source data merging to bring records to quality standards.
+  \item Implemented IEEE-compliant thermal rating models in Python covering solar heat gain, convective cooling, radiative heat loss, and conductor ampacity-resistance energy balance, enabling dynamic and static line rating computations within the platform.
+  \item Implemented Python and TypeScript routines within Foundry to perform geometric analysis of parallel transmission corridors, computing mutual impedance candidate pairs and characterizing average and percentile conductor separation distances, with line-to-line distance profiles visualized in platform-integrated UI graphs.
+  \item Overhauled legacy spreadsheets with VBA-based functionalities, maintainable assumption/reference sheets, and improved UX, establishing a more auditable and automatable calculation baseline ahead of platform migration.
+  \item Developed AutoLISP routines for AutoCAD one-line drawings that parse shape geometries and layer data to identify transmission lines, facilities, and equipment; deduce line segments and breaker-to-breaker sections including different equipment configurations; and export structured data to spreadsheets to bring drawing databases and engineering records to convergence.
+\end{rlist}
+
+\jobline{Transmission Engineer II}{Feb 2024 -- Jan 2025}
+\subline{PacifiCorp}
+\begin{rlist}
+  \item Utilizing high-level knowledge of transmission line design to scope new transmission lines in collaboration with other engineering disciplines.
+  \item Applying programming and software design skills and IEEE line rating knowledge to guide the development of proprietary software tools for FAC-008 compliance.
+  \item Initiating process improvement pipelines for transmission design processes and documentations.
+  \item Performing detail-oriented technical review of transmission standards and collaboration in their developments.
+  \item Continued all duties from Transmission Engineer I position.
+\end{rlist}
+
+\jobline{Transmission Engineer I}{Jan 2023 -- Feb 2024}
+\subline{PacifiCorp}
+\begin{rlist}
+  \item Utilizing in-depth knowledge of PLSCADD, L-PILE, NESC, and GO-95 for design of new power transmission lines and rebuilding/maintenance of existing lines in states of UT, WY, OR, WA, and CA in collaboration with teams of engineers, managers, field crew, and legal.
+  \item Utilizing in-depth knowledge of structural engineering and geotechnical engineering for custom-engineered solutions of transmission structures and drilled pier foundations with reference to ASCE, ACI, and FHWA to meet special needs.
+  \item Reduced engineering hours by threefold and cost by approx.\ \$1.5M by intersecting programming and automation experience and transmission engineering experience to create a line rating analysis tool. This analysis tool allows compliance with FERC-881 with minimum reduction of line capacity, increased calculation accuracy, and reduced engineering time.
+  \item Utilized visual basic programming skills to create automated tools for data analysis and modeling of existing transmission line ratings to assess FERC-881 compliance.
+  \item Employed excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, and transmission pole design aids.
+  \item Utilized transmission engineering knowledge and programming experience to generate company sag-tension standards for tree-wire.
+  \item Improved company standards and company procedures with detail-oriented reviews/QAQC.
+  \item Designing and reviewing drawings for tubular steel poles and drilled piers to withstand vertical and lateral loads.
+\end{rlist}
+
+\vspace{6pt}
+\noindent\textbf{Self-motivated Projects}\hfill July 2024 -- Jan 2025
+\begin{rlist}
+  \item Designed and developed a full-stack web app tool for project management, resource management, and business analysis using Flask, Django, JavaScript, HTML, SQL, and third-party API integration.
+  \item Created software for transforming PLS-CADD transmission models into line rating analysis graph-based and tree-based models using Python, OOP, and design patterns.
+  \item Developed a calculation tool for the bending capacity of hollow polygonal tapered poles by applying structural engineering skills and Python.
+\end{rlist}
+
+\vspace{6pt}
+\jobline{Structural Engineering/Construction Intern}{May 2015 -- Aug 2015}
+\subline{Kayson Construction Co., Tehran, Iran}
+\begin{rlist}
+  \item Worked with a team of 15+ engineers, 20+ construction managers, and 50+ construction workers.
+  \item Performed daily construction quality and safety inspections.
+  \item Prepared 30+ quality and safety inspection reports.
+\end{rlist}
+
+\jobline{AutoCADman and Structural Engineering Intern}{May 2014 -- Aug 2014}
+\subline{Sazeh Pardazi Iran Consultant Co., Tehran, Iran}
+\begin{rlist}
+  \item Prepared 30+ sheets of technical drawings for concrete and steel structures, including beams, columns, foundations, retaining walls, slabs, and joint details.
+  \item Apprenticed with a team of civil engineers and architects for design of steel and reinforced concrete beams, columns, and foundations.
+\end{rlist}
+
+\jobline{Class Projects}{Dec 2015 and May 2016}
+\begin{rlist}
+  \item Utilized ETABS for the design of a 5-story residential reinforced concrete structure and steel structure under standard combinations of live, dead, wind, and seismic loads and verified by hand calculations.
+  \item Utilized Plaxis and GeoStudio for the senior design project of retaining wall stability with and without nailing.
+\end{rlist}
+
+% ============================================================
+\rsection{Research Experience}
+
+\jobline{Graduate Research Assistant / Ph.D. Candidate}{Jun 2018 -- Jan 2023}
+\subline{University of Colorado Boulder, Boulder, CO}
+\begin{rlist}
+  \item Collaborated with a team of three senior researchers at the Lawrence Berkeley National Laboratory to investigate and develop mechanistic models for subcritical crack growth and crack healing, with reference to 400+ research and technical articles.
+  \item Investigated subcritical crack growth, crack healing, experimental apparatus, and utilization of optical birefringence techniques in fracture analysis with collaborators at LBNL.
+  \item Utilized knowledge of fundamentals of fracture mechanics, fluid transport, and boundary element methods to develop a software that couples fields of mechanics and physics.
+  \item Investigated the theory and engineering application of multiphysical and multiscale solid-fluid interactions (e.g., adsorption, surface tension, solvation pressure) in micro/meso/macroporous solids.
+  \item Developed, implemented, and validated a poromechanical model for adsorption-induced deformation of microporous material in MATLAB, based on thermodynamics, poromechanics, and surface mechanics.
+  \item Employed technical writing and illustrative skills for preparation of 4 peer-reviewed publications in journals of JMPS, IJSS, and EFM.
+\end{rlist}
+
+\jobline{Research and Implementation of granular media constitutive models}{2016 -- 2018}
+\subline{University of Colorado Boulder, Boulder, CO}
+\begin{rlist}
+  \item Research and implementation of elasto-plastic hardening constitutive models for modeling of sands in geomechanics.
+  \item Implemented granular material constitutive models in ABAQUS to investigate the response of dense and loose sands under triaxial loading and generate failure surface plots.
+  \item Programmed a discrete element MATLAB code for modeling of grain structure stability and avalanche.
+\end{rlist}
+
+\jobline{Design and Setup of Shaking Table}{2009 -- 2010}
+\subline{Allameh Helli 3 High School, Tehran, Iran (Highschool sophomore project)}
+\begin{rlist}
+  \item Designed and built a shaking table for evaluation of the natural frequencies of continuous cantilever beams.
+\end{rlist}
+
+\jobline{Design and Building of Line-Seeker Rescue Robot}{2009 -- 2010}
+\subline{Allameh Helli 3 High School, Tehran, Iran (Highschool junior project)}
+\begin{rlist}
+  \item Designed and built a line-seeker rescue robot for participation in the RoboCup IRAN OPEN 2010 competitions.
+\end{rlist}
+
+\jobline{Huffman Code Research and Implementation}{2008 -- 2009}
+\subline{Allameh Helli 3 High School, Tehran, Iran (Highschool freshman project)}
+\begin{rlist}
+  \item Researched and implemented the Huffman Code Theory for loss-less data encoding and file compression.
+\end{rlist}
+
+% ============================================================
+\rsection{Publications}
+
+\noindent\textbf{Journal Articles}
+
+\begin{publist}
+  \item Eskandari-Ghadi, Mehdi, and Yida Zhang. ``Mechanics of shrinkage-swelling transition of microporous materials at the initial stage of adsorption.'' \textit{International Journal of Solids and Structures} \textbf{222} (2021): 111041.
+  \item Mehdi Eskandari-Ghadi and Yida Zhang. ``Effect of pore size distribution on sorption-induced deformation of porous materials: a theoretical study.'' \textit{International Journal of Solids and Structures} (2022), published online.
+  \item Mehdi Eskandari-Ghadi, Deng Hang, Seiji Nakagawa, Steve Pride, Benjamin Gilbert, Yida Zhang. ``Surface force and reactant transport as the central mechanisms for subcritical crack growth: a theoretical study.'' \textit{Journal of Mechanics and Physics of Solids} (2022).
+  \item Seiji Nakagawa, Yida Zhang, Mehdi Eskandari-Ghadi, Donald W.\ Vasco. ``Corrections of Double-Torsion (DT) subcritical crack growth tests for crack profile geometry.'' \textit{Engineering Fracture Mechanics} (2022).
+\end{publist}
+
+% ============================================================
+\rsection{Conference Talks and Presentations}
+
+\jobline{EMI Virtual Conference 2021 and EMI Conference 2022}{May 2021 and May 2022}
+\begin{rlist}
+  \item Applied illustrative and verbal communication skills to deliver presentations titled ``A multi-scale theory explaining the initial shrinkage of micro-porous solid upon gas adsorption'' and ``A Multiphysical Surface-Force Based Fracture Theory for Subcritical Crack Growth in Surface-Reactive Environments'', followed by Q\&A from engineering and academic audience.
+  \item Received runner up award in the 2021 Student Poster Competition for poster presentation on sorption-induced deformation of porous material.
+\end{rlist}
+
+\jobline{Lawrence Berkeley National Laboratory BES --- Regular Presentations}{Sep 2020 -- Jan 2023}
+\begin{rlist}
+  \item Presented regular scientific presentations on topic of crack propagation to teams of research professionals and senior scientists in the LBNL BES with diverse backgrounds in mechanics, physics, and chemistry.
+  \item Presented a 30-minute abstract for senior scientists in the LBNL BES annual meeting on the effects of surface forces in subcritical crack propagation.
+\end{rlist}
+
+% ============================================================
+\rsection{Teaching Experience}
+
+\jobline{Advanced Mechanics of Materials (Graduate level) --- Teaching Assistant}{Fall 2016, Fall 2017}
+\subline{University of Colorado Boulder, Boulder, CO}
+\begin{rlist}
+  \item Responsible for holding office hours, preparation of homework and exam questions, and grading of homework, lab reports, and exams.
+  \item Held 9 laboratory teaching sessions for measurement of elastic properties of materials using extension, 3-point bending, and torsion experiments.
+\end{rlist}
+
+\jobline{Analytical Mechanics II --- Teaching Assistant}{Spring 2017}
+\subline{University of Colorado Boulder, Boulder, CO}
+\begin{rlist}
+  \item Responsible for holding office hours, preparation of homework and exam questions, and grading of homework.
+\end{rlist}
+
+\jobline{Dynamics (Undergraduate level) --- Teaching Assistant}{2018 -- 2019}
+\subline{University of Colorado Boulder, Boulder, CO}
+\begin{rlist}
+  \item Presented 3 class lectures, held 190 hours of office hours and exam preparation sessions, prepared and graded 6 exams and 45 homework question sets.
+  \item Tailored technical communication specific to each student's understanding and utilized AutoCAD 3D drawings and cross sections to enhance visualization and understanding.
+\end{rlist}
+
+\jobline{FE Exam Tutoring}{}
+\begin{rlist}
+  \item Tutored students for FE exam with 100\% success rate.
+\end{rlist}
+
+\vspace{4pt}
+\jobline{Structural Analysis II --- Teaching Assistant}{Fall 2014}
+\subline{University of Tehran, Tehran, Iran}
+\begin{rlist}
+  \item Responsible for grading homework and class projects.
+\end{rlist}
+
+\jobline{Hydraulics of Open Channels --- Teaching Assistant}{Fall 2015}
+\subline{University of Tehran, Tehran, Iran}
+\begin{rlist}
+  \item Responsible for holding office hours, preparation of homework and quizzes, and grading of homework and quizzes.
+\end{rlist}
+
+\vspace{6pt}
+\jobline{Math \& Science Teacher}{2014 -- 2015}
+\subline{Valiasr English Elementary School and Mesbah English Elementary School, Tehran, Iran}
+
+\vspace{6pt}
+\jobline{Private Tutoring --- Mathematics and Physics}{Summer 2012 and 2012 -- 2014}
+\begin{rlist}
+  \item Private lectures on freshman-level calculus and physics for high school and university students.
+\end{rlist}
+
+\jobline{Lecture on Successful University Admission}{Summer 2012}
+\subline{Erfan High School and Beheshti High School, Tehran, Iran}
+\begin{rlist}
+  \item Delivered talks on pursuit of successful education and strategies for the National University Qualification Exam (Konkour) for women's high school audiences.
+\end{rlist}
+
+% ============================================================
+\rsection{Leadership Roles}
+
+\jobline{Research Mentor}{Jan 2022 -- Jan 2023}
+\subline{University of Colorado Boulder}
+\begin{rlist}
+  \item Trained new Ph.D.\ students on fundamentals of mechanics, written and oral skills, and technical research.
+  \item Guided a research trainee through the modeling and simulation of beam bending in humidity actuators by application of the adsorptive poroelastic model.
+\end{rlist}
+
+\jobline{President/Co-president}{Aug 2018 -- May 2019}
+\subline{Persian Student Organization, Boulder, CO}
+\begin{rlist}
+  \item Proposed, secured funding, planned, and oversaw student events in collaboration with professionals from industry and academia, local businesses, and non-profit organizations.
+  \item Proposed event plans and secured event funding with the University of Colorado Boulder Events Board.
+  \item Managed teams of 5--10 members for event planning, advertisement, and execution.
+\end{rlist}
+
+% ============================================================
+\rsection{Technical Skills}
+
+\vspace{4pt}
+\noindent\textbf{Programming \& Software Development}\\
+Python, TypeScript/JavaScript, MATLAB, VBA, AutoLISP, FORTRAN, C++, HTML/CSS, SQL, PHP, Pascal
+
+\vspace{4pt}
+\noindent\textbf{Platforms \& Frameworks}\\
+Palantir Foundry (Spark, Polars, TypeScript/Python pipelines), Flask, Django, Palantir Foundry UI
+
+\vspace{4pt}
+\noindent\textbf{Engineering Software}\\
+PLSCADD/PLS-TOWER, L-PILE, Autodesk AutoCAD, ABAQUS, LS-DYNA, ETABS, Plaxis, GeoStudio, SAP2000, SAFE, Civil3D, WaterGEMS, SewerCAD, StormCAD
+
+\vspace{4pt}
+\noindent\textbf{Other Tools}\\
+Git, Microsoft Office Suite, LaTeX, Inkscape, Corel Draw, OriginPro
+
+\vspace{4pt}
+\noindent\textbf{Engineering Standards}\\
+NESC, GO-95, FERC-881
+
+% ============================================================
+\rsection{Language Skills}
+
+\vspace{2pt}
+\begin{tabular}{@{}lll@{}}
+  English & --- & Fluent/Native \\[2pt]
+  Persian/Farsi & --- & Native \\[2pt]
+\end{tabular}
+
+% ============================================================
+\rsection{Other Interests}
+
+\begin{rlist}
+  \item I am a plant hobbyist, animal lover, dog owner, and skilled chef for humans and dogs.
+  \item I have a great passion for programming as a hobby.
+  \item I enjoy cycling, swimming, jogging, and playing soccer.
+  \item I play guitar and piano (beginner).
+  \item I regularly watch movies and listen to music.
+\end{rlist}
+
+\end{document}
