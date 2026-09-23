@@ -32,30 +32,46 @@ scripts/
 
 ## Session mechanics
 
+`main` is protected: it only takes changes through a pull request, and CI
+(`.github/workflows/build.yml`) rebuilds the outputs automatically — a
+Markdown preview on every PR, the PDFs and canonical Markdown once a PR
+merges. Nothing is ever pushed to `main` directly.
+
 ### Starting a session
 When the user wants to add or edit content:
-1. Copy `resume.tex` → `resume_draft.tex` and `cv.tex` → `cv_draft.tex`.
-2. Confirm: "Drafts created from master files. Working on
-   `resume_draft.tex` and `cv_draft.tex`."
-3. All edits happen in the draft files. Never touch the master `.tex`
-   files until a checkpoint is confirmed.
+1. Create or switch to a feature branch off `main`, e.g.
+   `git checkout -b update/<short-description> origin/main`.
+2. Copy `resume.tex` → `resume_draft.tex` and `cv.tex` → `cv_draft.tex`.
+3. Confirm: "Drafts created from master files on branch `<branch>`.
+   Working on `resume_draft.tex` and `cv_draft.tex`."
+4. All edits happen in the draft files. Never touch the master `.tex`
+   files until a checkpoint is confirmed. Draft `.tex`/`.pdf`/`.md` files
+   are gitignored and never committed.
 
 ### Checkpoints
 At a natural stopping point, or when the user is happy with the drafts, ask:
 > "Ready to save to master? I'll copy both drafts into `resume.tex` and
-> `cv.tex` and rebuild the PDFs and Markdown."
+> `cv.tex`, commit, and push the branch."
 
 Only after explicit confirmation:
 1. Copy `resume_draft.tex` → `resume.tex`, `cv_draft.tex` → `cv.tex`.
-2. Run `python scripts/tex_to_pdf.py resume/resume.tex` and
-   `python scripts/tex_to_pdf.py cv/cv.tex`.
-3. Run `python scripts/tex_to_markdown.py resume/resume.tex` and
-   `python scripts/tex_to_markdown.py cv/cv.tex`.
-4. Delete both draft files.
+2. Delete both draft files.
+3. Commit `resume/resume.tex` and `cv/cv.tex` on the feature branch and
+   push it.
+4. Open a pull request into `main` (skip if one is already open for this
+   branch). CI rebuilds `resume.md`/`cv.md` on the PR branch as a preview
+   automatically — no local build needed to review wording before merging.
+5. Once the user is satisfied and the PR is merged, CI rebuilds the PDFs
+   and the canonical Markdown on `main` automatically. A local build
+   (`scripts/tex_to_pdf.py`, `scripts/tex_to_markdown.py`) is still
+   available any time an on-demand preview is wanted, but is no longer
+   required.
 
 ### Aborting
 If the user says to discard changes: delete both draft files, confirm
-"Drafts discarded. Master files unchanged," and stop.
+"Drafts discarded. Master files unchanged," and stop. If a feature branch
+was created for the session and holds no other unmerged work, ask whether
+to delete it too.
 
 ---
 
