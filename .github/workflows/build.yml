@@ -7,6 +7,7 @@ on:
       - "resume/resume.tex"
       - "cv/cv.tex"
       - "scripts/tex_to_markdown.py"
+      - ".github/workflows/build.yml"
   push:
     branches: [main]
     paths:
@@ -17,19 +18,21 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   # Runs on every PR into main. No TeX involved -- just the pure-Python
-  # markdown converter -- so it's fast, and it commits the rebuilt .md
-  # straight onto the PR branch so the PR diff shows the actual rendered
-  # output, not just the LaTeX source.
+  # markdown converter -- so it's fast. Posts the rebuilt .md as a PR
+  # comment rather than committing it onto the PR branch: committing would
+  # move the PR's head to a commit that never runs its own check (GitHub
+  # doesn't re-trigger workflows on bot-authored pushes), which leaves a
+  # "markdown-preview" required status check permanently stuck as
+  # "expected" on that new head and blocks merging.
   markdown-preview:
     if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
 
       - uses: actions/setup-python@v5
         with:
@@ -40,13 +43,36 @@ jobs:
           python scripts/tex_to_markdown.py resume/resume.tex
           python scripts/tex_to_markdown.py cv/cv.tex
 
-      - name: Commit rebuilt markdown
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resume/resume.md cv/cv.md
-          git diff --staged --quiet || git commit -m "Rebuild markdown preview [skip ci]"
-          git push origin HEAD:${{ github.head_ref }}
+      - name: Post preview as PR comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const resume = fs.readFileSync('resume/resume.md', 'utf8');
+            const cv = fs.readFileSync('cv/cv.md', 'utf8');
+            const marker = '<!-- markdown-preview -->';
+            const body = `${marker}\n### Markdown preview\n\n<details><summary>resume.md</summary>\n\n\`\`\`markdown\n${resume}\n\`\`\`\n</details>\n\n<details><summary>cv.md</summary>\n\n\`\`\`markdown\n${cv}\n\`\`\`\n</details>`;
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find((c) => c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
 
   # Runs once a PR is merged into main. Full build -- installs TeX and
   # rebuilds both PDFs plus the canonical Markdown -- then commits the

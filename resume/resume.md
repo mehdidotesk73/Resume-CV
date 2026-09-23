@@ -64,7 +64,7 @@ University of Colorado Boulder
 
 **Talks and Presentations**
 
-**EMI Virtual Conference 2021 and EMI Conference 2022** ┷ May 2021 and May 2022
+**EMI Virtual Conference 2021 and EMI Conference 2022** · May 2021 and May 2022
 
 - Applied illustrative and verbal communication skills to deliver presentations titled "A multi-scale theory explaining the initial shrinkage of micro-porous solid upon gas adsorption" and "A Multiphysical Surface-Force Based Fracture Theory for Subcritical Crack Growth in Surface-Reactive Environments", followed by Q&A from engineering and academic audience.
 - Received runner up award in the 2021 Student Poster Competition for poster presentation on sorption-induced deformation of porous material.
