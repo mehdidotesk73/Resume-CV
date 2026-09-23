@@ -32,10 +32,12 @@ scripts/
 
 ## Session mechanics
 
-`main` is protected: it only takes changes through a pull request, and CI
-(`.github/workflows/build.yml`) rebuilds the outputs automatically — a
-Markdown preview on every PR, the PDFs and canonical Markdown once a PR
-merges. Nothing is ever pushed to `main` directly.
+`main` is protected: it only takes changes through a pull request. CI
+(`.github/workflows/build.yml`) installs TeX and rebuilds `resume.pdf`,
+`cv.pdf`, `resume.md`, and `cv.md` directly onto every PR branch, so by
+the time a PR is merged `main` already carries the finished build as
+part of the merge commit — there's no separate post-merge build step,
+and nothing is ever pushed to `main` directly.
 
 ### Starting a session
 When the user wants to add or edit content:
@@ -59,13 +61,15 @@ Only after explicit confirmation:
 3. Commit `resume/resume.tex` and `cv/cv.tex` on the feature branch and
    push it.
 4. Open a pull request into `main` (skip if one is already open for this
-   branch). CI rebuilds `resume.md`/`cv.md` on the PR branch as a preview
-   automatically — no local build needed to review wording before merging.
-5. Once the user is satisfied and the PR is merged, CI rebuilds the PDFs
-   and the canonical Markdown on `main` automatically. A local build
-   (`scripts/tex_to_pdf.py`, `scripts/tex_to_markdown.py`) is still
-   available any time an on-demand preview is wanted, but is no longer
-   required.
+   branch). CI builds `resume.pdf`, `cv.pdf`, `resume.md`, and `cv.md`
+   and commits them onto the PR branch automatically — no local build
+   needed; just look at the PR diff to review the actual rendered output
+   before merging.
+5. Once the user is satisfied, merge the PR. The branch already carries
+   the finished build, so merging is the last step — nothing further
+   runs. A local build (`scripts/tex_to_pdf.py`,
+   `scripts/tex_to_markdown.py`) is still available any time an
+   on-demand preview is wanted, but is no longer required.
 
 ### Aborting
 If the user says to discard changes: delete both draft files, confirm
