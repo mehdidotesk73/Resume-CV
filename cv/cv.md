@@ -19,7 +19,7 @@ University of Tehran · 2012–2016
 Ranked 5th among 113 undergraduate civil engineering students of the same entrance
 Average GPA of all students at the Civil Engineering Department: 15.02/20
 
-**High School** — Tehran, Iran
+**High School** · Tehran, Iran
 Allameh Helli 3 (NODET) High School · 2009–2012
 Total GPA: 19.98/20
 
@@ -136,15 +136,15 @@ Calculus I — 20/20
 - Implemented granular material constitutive models in ABAQUS to investigate the response of dense and loose sands under triaxial loading and generate failure surface plots.
 - Programmed a discrete element MATLAB code for modeling of grain structure stability and avalanche.
 
-**Design and Setup of Shaking Table** — Allameh Helli 3 High School, Tehran, Iran · 2009–2010
+**Design and Setup of Shaking Table** — Allameh Helli 3 High School, Tehran, Iran (Highschool sophomore project) · 2009–2010
 
 - Designed and built a shaking table for evaluation of the natural frequencies of continuous cantilever beams.
 
-**Design and Building of Line-Seeker Rescue Robot** — Allameh Helli 3 High School, Tehran, Iran · 2009–2010
+**Design and Building of Line-Seeker Rescue Robot** — Allameh Helli 3 High School, Tehran, Iran (Highschool junior project) · 2009–2010
 
 - Designed and built a line-seeker rescue robot for participation in the RoboCup IRAN OPEN 2010 competitions.
 
-**Huffman Code Research and Implementation** — Allameh Helli 3 High School, Tehran, Iran · 2008–2009
+**Huffman Code Research and Implementation** — Allameh Helli 3 High School, Tehran, Iran (Highschool freshman project) · 2008–2009
 
 - Researched and implemented the Huffman Code Theory for loss-less data encoding and file compression.
 
@@ -163,7 +163,7 @@ Calculus I — 20/20
 
 ## CONFERENCE TALKS AND PRESENTATIONS
 
-**EMI Virtual Conference 2021 and EMI Conference 2022** ┷ May 2021 and May 2022
+**EMI Virtual Conference 2021 and EMI Conference 2022** · May 2021 and May 2022
 
 - Applied illustrative and verbal communication skills to deliver presentations titled "A multi-scale theory explaining the initial shrinkage of micro-porous solid upon gas adsorption" and "A Multiphysical Surface-Force Based Fracture Theory for Subcritical Crack Growth in Surface-Reactive Environments", followed by Q&A from engineering and academic audience.
 - Received runner up award in the 2021 Student Poster Competition for poster presentation on sorption-induced deformation of porous material.
