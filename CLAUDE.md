@@ -115,14 +115,27 @@ user to:
    (`"Rebuild PDF & markdown from .tex sources"`) — this is normal and
    self-resolving, not a new conflict to chase.
 
-When multiple PRs are open together, expect to repeat this after *every*
-merge: merging PR A can re-open the same fake conflict on PR B, C, etc.
-Don't wait for the user to notice and report it — after any PR merges,
-proactively check the other open PRs' mergeable state and walk through
-this fix so the next one is ready to merge without the user having to
-ask. If the user is choosing a merge order, mention this cost so they
-can decide whether to merge PRs one at a time (cleaning up after each)
-or batch approvals and let Claude sweep the conflicts afterward.
+When multiple PRs are open together, resolve this lazily, not
+preemptively. GitHub Actions never cross-triggers between PRs on its
+own — nothing rebuilds PR B just because PR A merged — so there is no
+CI cost to a conflict sitting unresolved on a PR nobody is about to
+merge yet. Only spend a rebuild on a PR when it's next in line:
+
+1. If the user hasn't stated a merge order for the open PRs, ask before
+   touching any of them.
+2. Fix and clear the conflict only on whichever PR is merging next.
+   Leave every other open PR's conflict alone, even if it's already
+   showing `dirty` — fixing it now just means redoing it again once an
+   earlier PR merges ahead of it and shifts `main` a second time (this
+   is exactly the rework that happened resolving #8 and #10 together
+   before either had merged).
+3. Once that PR merges, move to whichever PR is next: re-check its
+   mergeable state (it may now show a fresh conflict against the just
+   -updated `main` even if it didn't before), resolve it with the steps
+   above, and tell the user it's ready.
+4. Repeat per PR until the queue is empty. Don't wait for the user to
+   notice and report each new conflict — proactively check the next
+   PR in line as soon as the previous one merges.
 
 ---
 
