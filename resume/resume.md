@@ -1,6 +1,6 @@
 # Mehdi Eskandari-Ghadi
 
-mehdi.esk73@gmail.com | (303)378-1407 | Salt Lake City, UT
+mehdi.esk73@gmail.com | (303)378-1407 | Federal Way, WA
 www.linkedin.com/in/M-E-Ghadi | Authorized to work in the U.S. | Sponsor not required
 
 ---
@@ -16,7 +16,7 @@ University of Colorado Boulder
 ## TECHNICAL SKILLS
 
 **Programming:** Python, TypeScript/JavaScript, VBA, MATLAB, AutoLISP
-**Platforms & Data:** Palantir Foundry, Apache Spark, Polars
+**Platforms & Data:** Palantir Foundry, Apache Spark, Polars, Pandas
 **Engineering:** AutoCAD, PLSCADD, L-PILE, ABAQUS/LS-DYNA
 **Standards & Tools:** NESC, GO-95, FERC-881, Git, Microsoft Office Suite, LaTeX
 
@@ -24,22 +24,22 @@ University of Colorado Boulder
 
 ## ENGINEERING EXPERIENCE
 
-**Reliability & Standards Software Engineer II** — PacifiCorp · Jan 2025 – Present
+**Reliability & Standards Solutions Engineer II** — PacifiCorp · Jan 2025 – Present
 
-- Applied full-stack TypeScript and Python engineering to design and implement automated workflows on the Palantir Foundry platform, covering audit preparation, data management UIs, interdepartmental data collection, and queue-based processing pipelines.
-- Applied git-inspired version-control concepts for system analysis lifecycle management within Foundry, supporting cloning, modification, and staged publication of facility analyses through department-specific review checkpoints, with automated resource tracking and validation.
+- Applied full-stack TypeScript and Python engineering to design and implement automated Foundry and custom-software workflows, covering audit preparation, data management UIs, interdepartmental data collection, and queue-based processing pipelines.
+- Architected a git-inspired version-control framework - a reusable pattern for system analysis lifecycle management within Foundry - supporting cloning, modification, and staged publication of facility analyses through department-specific review checkpoints, with automated resource tracking and validation.
 - Leveraging Spark and Polars, designed backend Python data pipelines for large-scale ingestion, parsing, and health remediation of legacy spreadsheets, automating data cleanup and multi-source merging to bring records to quality standards.
 - Utilized knowledge of physics and numerical methods to implement IEEE-compliant thermal rating models in Python, solving the nonlinear ordinary-differential heat balance (solar heat gain, convective cooling, radiative heat loss, conductor resistance) through Runge-Kutta forward integration and Newton-Raphson inverse root-finding, vectorized at scale for static, dynamic, and transient line ratings within the platform.
-- Applied VBA/Excel programming skills alongside IEEE equipment-rating knowledge to design and build a streamlined, user-friendly FAC-008 substation equipment rating tool from scratch, computing normal and emergency ratings and ranking limiting elements for substation equipment — including breakers, switches, capacitors, reactors, buses, jumpers, and transformers — from company standards and nameplate specifications.
+- Applied VBA/Excel programming skills alongside IEEE equipment-rating knowledge to design and build a streamlined, user-friendly FAC-008 substation equipment rating tool from scratch, computing normal and emergency ratings and ranking limiting elements for substation equipment - including breakers, switches, capacitors, reactors, buses, jumpers, and transformers - from company standards and nameplate specifications.
 - Applied geometric and spatial analysis methods to compute mutual-impedance candidate pairs, line-distance statistics, and line-to-line distance visualizations for parallel transmission corridors, integrated into platform UI graphs.
-- Deployed AutoCAD experience and design architecture skills to implement AutoLISP one-line-drawing functionality to parse shape geometries and layer data — identifying transmission facilities and equipment, deducing line segment and equipment configurations, and exporting structured data to reconcile database records with engineering drawings.
+- Deployed AutoCAD experience and design architecture skills to implement AutoLISP one-line-drawing functionality to parse shape geometries and layer data - identifying transmission facilities and equipment, deducing line segment and equipment configurations, and exporting structured data to reconcile database records with engineering drawings.
 
 **Transmission Engineer I/II** — PacifiCorp · Jan 2023 – Jan 2025
 
 - Utilizing high-level knowledge of transmission line design to scope new transmission lines in collaboration with other engineering disciplines.
 - Utilizing in-depth knowledge of PLSCADD, L-PILE, NESC, and GO-95 for design of new power transmission lines and rebuilding/maintenance of existing lines in states of UT, WY, OR, WA, and CA in collaboration with teams of engineers, managers, field crew, and legal.
 - Utilizing in-depth knowledge of structural engineering and geotechnical engineering for custom-engineered solutions of transmission structures and drilled pier foundations with reference to ASCE, ACI, and FHWA to meet special needs.
-- Utilized VBA and Excel programming alongside transmission line rating engineering knowledge to design and build an auditable, automated FERC-881 steady-state line-rating analysis tool from scratch — integrating PLS-CADD structure data, conductor properties, and historical weather data with CIGRE-referenced seasonal rating methodology to compute normal and emergency ratings and critical-span summaries — reducing engineering hours threefold and costs by approx. $1.5M.
+- Utilized VBA and Excel programming alongside transmission line rating engineering knowledge to design and build an auditable, automated FERC-881 steady-state line-rating analysis tool from scratch - integrating PLS-CADD structure data, conductor properties, and historical weather data with CIGRE-referenced seasonal rating methodology to compute normal and emergency ratings and critical-span summaries - reducing engineering hours threefold and costs by approx. $1.5M.
 - Employed excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, and transmission pole design aids.
 - Utilized transmission engineering knowledge and programming experience to generate company sag-tension standards for tree-wire.
 - Designing and reviewing drawings for tubular steel poles and drilled piers to withstand vertical and lateral loads.
