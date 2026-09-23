@@ -61,15 +61,16 @@ Only after explicit confirmation:
 3. Commit `resume/resume.tex` and `cv/cv.tex` on the feature branch and
    push it.
 4. Open a pull request into `main` (skip if one is already open for this
-   branch). CI builds `resume.pdf`, `cv.pdf`, `resume.md`, and `cv.md`
-   and commits them onto the PR branch automatically — no local build
-   needed; just look at the PR diff to review the actual rendered output
-   before merging.
-5. Once the user is satisfied, merge the PR. The branch already carries
-   the finished build, so merging is the last step — nothing further
-   runs. A local build (`scripts/tex_to_pdf.py`,
-   `scripts/tex_to_markdown.py`) is still available any time an
-   on-demand preview is wanted, but is no longer required.
+   branch), then stop. **Never merge it — merging is the repo owner's
+   call alone.** Tell the user it's ready and share the link. CI builds
+   `resume.pdf`, `cv.pdf`, `resume.md`, and `cv.md` and commits them onto
+   the PR branch automatically — no local build needed; the user can
+   review the actual rendered output in the PR diff before merging it
+   themselves. The branch already carries the finished build, so once
+   they merge, nothing further runs. A local build
+   (`scripts/tex_to_pdf.py`, `scripts/tex_to_markdown.py`) is still
+   available any time an on-demand preview is wanted, but is no longer
+   required.
 
 ### Aborting
 If the user says to discard changes: delete both draft files, confirm

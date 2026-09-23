@@ -1,14 +1,12 @@
 name: Build resume & CV
 
 on:
+  # No paths filter: "markdown-preview" is a required status check on
+  # main, so it must run on every PR -- a required check that's filtered
+  # out on some PRs (e.g. a docs-only change) leaves those PRs blocked
+  # forever waiting on a check that will never report.
   pull_request:
     branches: [main]
-    paths:
-      - "resume/resume.tex"
-      - "cv/cv.tex"
-      - "scripts/tex_to_pdf.py"
-      - "scripts/tex_to_markdown.py"
-      - ".github/workflows/build.yml"
 
 permissions:
   contents: write
