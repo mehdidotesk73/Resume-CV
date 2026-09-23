@@ -77,15 +77,12 @@ University of Colorado Boulder
 
 **Teaching Assistantships/Tutoring**
 
-**Teaching Assistant / Tutor** — University of Colorado Boulder, Boulder, CO · Aug 2016 – Dec 2019
+**Teaching Assistant / Tutor** — University of Colorado Boulder, Boulder, CO & University of Tehran, Tehran, Iran · 2014–2019
 
-- Presented class lectures and laboratory teaching sessions, held hours of office hours and exam preparation sessions, prepared and graded exams and homework question sets, for courses of Advanced mechanics of materials (graduate level) and Dynamics (undergraduate level).
+- Presented class lectures and laboratory teaching sessions, held office hours and exam preparation sessions, prepared and graded exams and homework question sets, for courses of Advanced mechanics of materials and Dynamics.
 - Tutored students for FE exam with 100% success rate.
-- Tailored technical communication specific to each student's understanding and utilized CAD skills to enhance visualization and understanding.
-
-**Teaching Assistant** — University of Tehran, Tehran, Iran · Fall 2014 and Fall 2015
-
-- Held weekly office hours and graded homework, quizzes, and class projects, for courses of Structural Analysis II (undergraduate level) and Hydraulics of open channels (undergraduate level).
+- Tailored teaching approach specific to different student learning styles and utilized CAD skills to enhance visualization and understanding.
+- Held office hours and graded homework, quizzes, and class projects for Structural Analysis II and Hydraulics of open channels as a Teaching Assistant at the University of Tehran, Fall 2014 and Fall 2015.
 
 ---
 
@@ -101,9 +98,3 @@ University of Colorado Boulder
 **President/Co-president — Persian Student Organization, Boulder, CO** — University of Colorado Boulder, Boulder, CO · Aug 2018 – May 2019
 
 - Proposed, secured funding, planned, and oversaw student events in collaboration with professionals from industry and academia, local businesses, and non-profit organizations.
-
----
-
-## OTHER INTERESTS
-
-- I am a plant hobbyist, animal lover, dog owner, and skilled chef for humans and dogs.
