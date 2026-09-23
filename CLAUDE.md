@@ -27,9 +27,9 @@ scripts/
 
 ## Resume vs. CV
 
-- **Resume** (`resume.tex`): curated, concise, 1–2 pages. Bullets are
-  selected and worded for impact against a target job/domain. Older or
-  less relevant experience may be trimmed.
+- **Resume** (`resume.tex`): curated, concise, target length 1.5–2.5
+  pages. Bullets are selected and worded for impact against a target
+  job/domain. Older or less relevant experience may be trimmed.
 - **CV** (`cv.tex`): cumulative and complete. Every role, project,
   publication, talk, and achievement is preserved in full, forever.
   **Append-only** — never remove or shorten an entry.
@@ -178,6 +178,18 @@ application. This is a separate path from a normal checkpoint.
    - Run `scripts/tex_to_pdf.py` and `scripts/tex_to_markdown.py`
      against that `Versions/` copy locally, producing
      `Versions/<slug>_resume.pdf` and `Versions/<slug>_resume.md`.
+   - Check the built PDF's page count. **Snapshots target 2 pages,
+     stricter than the master's 1.5–2.5.** If it runs over 2, tell the
+     user before going further: how many lines over (check what
+     actually spills onto the extra page, not just a page-count
+     guess), and one or two concrete ways to close the gap —
+     a specific bullet to rephrase/shorten, or a specific bullet/entry
+     that's a reasonable candidate to drop. Don't cut anything
+     yourself; per Content rules below, bullets are never removed
+     without explicit instruction. If testing a fix locally (e.g. to
+     confirm a proposed cut actually reaches 2 pages), use a scratch
+     copy, not the files being delivered, and report the verified
+     result rather than an estimate.
    - Delete the ephemeral `resume_draft.tex`/`.pdf`/`.md` as normal.
 4. Commit all three new `Versions/<slug>_resume.*` files on a feature
    branch and open a PR into `main` — same as every other change, Claude
