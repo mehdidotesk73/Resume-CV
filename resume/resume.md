@@ -58,7 +58,7 @@ University of Colorado Boulder
 - Collaborated with a team of three senior researchers at the Lawrence Berkeley National Laboratory to investigate and develop mechanistic models for subcritical crack growth healing.
 - Utilized knowledge of fundamentals of fracture mechanics, fluid transport, and boundary element methods to develop a software that couples fields of mechanics and physics.
 - Merged expertise in research, programming, and engineering to investigate multiphysical and multiscale solid-fluid interactions (e.g., adsorption, surface tension, solvation pressure) in porous solids and develop a thermodynamics-poromechanics-based MATLAB software for "adsorption-induced deformation of microporous material".
-- Employed technical writing and illustrative skills for preparation of 4 peer-reviewed publications in journals of JMPS, IJSS, and EFM.
+- Employed technical writing and illustrative skills to author 4 peer-reviewed publications in respected journals of JMPS, IJSS, and EFM.
 
 **Talks and Presentations**
 
@@ -70,10 +70,6 @@ University of Colorado Boulder
 **Lawrence Berkeley National Laboratory BES** · Sep 2020 – Jan 2023
 
 - Presented regular scientific presentations on topic of crack propagation to teams of research professionals and senior scientists in the LBNL BES with diverse backgrounds in mechanics, physics, and chemistry.
-
-**Extracurricular Projects** · 2018
-
-- Programmed a discrete element MATLAB code for modeling of grain structure stability and avalanche.
 
 ---
 
