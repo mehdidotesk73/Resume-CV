@@ -82,6 +82,61 @@ If the user says to discard changes: delete both draft files, confirm
 was created for the session and holds no other unmerged work, ask whether
 to delete it too.
 
+### Parallel open PRs and the PDF-timestamp conflict
+`pdflatex` embeds a build timestamp in every PDF it produces, so two
+independent CI builds of the *same unchanged* `.tex` source still produce
+byte-different `resume.pdf`/`cv.pdf`. This creates a predictable, fake
+merge conflict whenever more than one PR is open at once:
+
+1. PR A merges into `main`, carrying its own freshly CI-built PDFs.
+2. Any other open PR (PR B) that already has its own CI-built PDFs now
+   diverges from `main` at the binary level, even if the underlying
+   `.tex` content never conflicts. GitHub reports this as a real merge
+   conflict (`mergeable_state: "dirty"`) on `cv.pdf`/`resume.pdf`.
+
+This is expected, not a sign anything went wrong. When it happens (the
+user will typically see "This branch has conflicts that must be
+resolved" on the PDF files), resolve it directly rather than asking the
+user to:
+1. `git fetch origin main <pr-branch>`, checkout the PR branch, and
+   `git merge origin/main`.
+2. The conflict will land only on the binary PDFs. Never hand-pick a
+   side — regenerate both fresh from source:
+   `python3 scripts/tex_to_pdf.py resume/resume.tex` and
+   `python3 scripts/tex_to_pdf.py cv/cv.tex`.
+3. Stage the real deliverables (`resume/resume.pdf`, `cv/cv.pdf`, and
+   the tracked `.build/*.log` files) — leave any untracked
+   `.fdb_latexmk`/`.fls`/`.build`-copy-of-the-PDF byproducts alone, they
+   don't match this repo's tracked-file convention.
+4. Verify page counts still hold (`pdfinfo <file>.pdf | grep Pages`)
+   before committing, then commit and push.
+5. CI will re-run on the push and, since its own rebuild also gets a
+   fresh timestamp, will usually add one more bot commit on top
+   (`"Rebuild PDF & markdown from .tex sources"`) — this is normal and
+   self-resolving, not a new conflict to chase.
+
+When multiple PRs are open together, resolve this lazily, not
+preemptively. GitHub Actions never cross-triggers between PRs on its
+own — nothing rebuilds PR B just because PR A merged — so there is no
+CI cost to a conflict sitting unresolved on a PR nobody is about to
+merge yet. Only spend a rebuild on a PR when it's next in line:
+
+1. If the user hasn't stated a merge order for the open PRs, ask before
+   touching any of them.
+2. Fix and clear the conflict only on whichever PR is merging next.
+   Leave every other open PR's conflict alone, even if it's already
+   showing `dirty` — fixing it now just means redoing it again once an
+   earlier PR merges ahead of it and shifts `main` a second time (this
+   is exactly the rework that happened resolving #8 and #10 together
+   before either had merged).
+3. Once that PR merges, move to whichever PR is next: re-check its
+   mergeable state (it may now show a fresh conflict against the just
+   -updated `main` even if it didn't before), resolve it with the steps
+   above, and tell the user it's ready.
+4. Repeat per PR until the queue is empty. Don't wait for the user to
+   notice and report each new conflict — proactively check the next
+   PR in line as soon as the previous one merges.
+
 ---
 
 ## Adding a new experience
