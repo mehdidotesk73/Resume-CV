@@ -82,6 +82,48 @@ If the user says to discard changes: delete both draft files, confirm
 was created for the session and holds no other unmerged work, ask whether
 to delete it too.
 
+### Parallel open PRs and the PDF-timestamp conflict
+`pdflatex` embeds a build timestamp in every PDF it produces, so two
+independent CI builds of the *same unchanged* `.tex` source still produce
+byte-different `resume.pdf`/`cv.pdf`. This creates a predictable, fake
+merge conflict whenever more than one PR is open at once:
+
+1. PR A merges into `main`, carrying its own freshly CI-built PDFs.
+2. Any other open PR (PR B) that already has its own CI-built PDFs now
+   diverges from `main` at the binary level, even if the underlying
+   `.tex` content never conflicts. GitHub reports this as a real merge
+   conflict (`mergeable_state: "dirty"`) on `cv.pdf`/`resume.pdf`.
+
+This is expected, not a sign anything went wrong. When it happens (the
+user will typically see "This branch has conflicts that must be
+resolved" on the PDF files), resolve it directly rather than asking the
+user to:
+1. `git fetch origin main <pr-branch>`, checkout the PR branch, and
+   `git merge origin/main`.
+2. The conflict will land only on the binary PDFs. Never hand-pick a
+   side — regenerate both fresh from source:
+   `python3 scripts/tex_to_pdf.py resume/resume.tex` and
+   `python3 scripts/tex_to_pdf.py cv/cv.tex`.
+3. Stage the real deliverables (`resume/resume.pdf`, `cv/cv.pdf`, and
+   the tracked `.build/*.log` files) — leave any untracked
+   `.fdb_latexmk`/`.fls`/`.build`-copy-of-the-PDF byproducts alone, they
+   don't match this repo's tracked-file convention.
+4. Verify page counts still hold (`pdfinfo <file>.pdf | grep Pages`)
+   before committing, then commit and push.
+5. CI will re-run on the push and, since its own rebuild also gets a
+   fresh timestamp, will usually add one more bot commit on top
+   (`"Rebuild PDF & markdown from .tex sources"`) — this is normal and
+   self-resolving, not a new conflict to chase.
+
+When multiple PRs are open together, expect to repeat this after *every*
+merge: merging PR A can re-open the same fake conflict on PR B, C, etc.
+Don't wait for the user to notice and report it — after any PR merges,
+proactively check the other open PRs' mergeable state and walk through
+this fix so the next one is ready to merge without the user having to
+ask. If the user is choosing a merge order, mention this cost so they
+can decide whether to merge PRs one at a time (cleaning up after each)
+or batch approvals and let Claude sweep the conflicts afterward.
+
 ---
 
 ## Adding a new experience
