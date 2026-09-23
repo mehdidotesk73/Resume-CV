@@ -16,6 +16,10 @@ cv/
 ├── cv_draft.tex          ← working copy, created alongside resume_draft.tex
 ├── cv.pdf
 └── cv.md
+Versions/
+└── <slug>_resume.{tex,pdf,md}  ← position-specific tailored resume snapshots;
+                                   built and committed by Claude directly, never
+                                   touched by CI, and never affect resume.tex
 scripts/
 ├── tex_to_pdf.py         ← compile a .tex file to PDF (latexmk/pdflatex)
 └── tex_to_markdown.py    ← convert a .tex file to the house-style Markdown
@@ -152,6 +156,46 @@ this every time new experience is added to the resume:
   the user to read the result (the rebuilt PDF/Markdown) and give
   feedback. Expect this to be followed by one or more rounds of surgical
   refinement, each gated by the diff-approval rule above.
+
+---
+
+## Position-specific tailored versions
+
+Sometimes the user wants a resume tailored to one specific job posting
+without touching the stable master `resume.tex` at all — no new
+experience to add, nothing to permanently reorganize, just this one
+application. This is a separate path from a normal checkpoint.
+
+1. Start a session as usual: copy `resume.tex` → `resume_draft.tex`.
+   The CV is never tailored, so there's no need for `cv_draft.tex` here.
+2. Tailor per the rules under Content rules below (wording, emphasis,
+   and reordering only — no new claims), showing the diff for approval
+   before writing each change, same as any surgical edit.
+3. Once approved, don't copy the draft into `resume.tex`. Instead:
+   - Copy `resume_draft.tex` to `Versions/<slug>_resume.tex`, where
+     `<slug>` identifies the position clearly (company and/or role —
+     e.g. `Versions/jacobs-fde_resume.tex`).
+   - Run `scripts/tex_to_pdf.py` and `scripts/tex_to_markdown.py`
+     against that `Versions/` copy locally, producing
+     `Versions/<slug>_resume.pdf` and `Versions/<slug>_resume.md`.
+   - Delete the ephemeral `resume_draft.tex`/`.pdf`/`.md` as normal.
+4. Commit all three new `Versions/<slug>_resume.*` files on a feature
+   branch and open a PR into `main` — same as every other change, Claude
+   opens it and stops there; never merge it.
+
+CI never touches `Versions/`: the build workflow only ever rebuilds
+`resume.pdf`/`cv.pdf`/`resume.md`/`cv.md` from `resume.tex`/`cv.tex`.
+Versioned tailored files are built and committed by Claude directly, and
+stay fixed once merged until a future re-tailoring request updates them.
+
+The user only downloads and uses resumes from `main` — never a
+locally-generated file handed over outside of git — so even though a
+tailored version doesn't touch the master, it still goes through the
+same commit-and-PR path as everything else, not just a chat attachment.
+
+If, instead, the user decides a tailored draft should *become* the new
+master (rather than live as its own `Versions/` entry), that's just a
+normal checkpoint: copy the draft into `resume.tex` as usual.
 
 ---
 
