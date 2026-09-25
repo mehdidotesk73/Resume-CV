@@ -36,15 +36,15 @@ University of Colorado Boulder
 
 **Transmission Engineer I/II** — PacifiCorp · Jan 2023 – Jan 2025
 
-- Utilizing in-depth knowledge of PLSCADD, L-PILE, NESC, and GO-95 for design of new power transmission lines and rebuilding/maintenance of existing lines in states of UT, WY, OR, WA, and CA in collaboration with teams of engineers, managers, field crew, and legal.
+- Utilized in-depth knowledge of PLSCADD, L-PILE, NESC, and GO-95 for design of new power transmission lines and rebuilding/maintenance of existing lines in states of UT, WY, OR, WA, and CA in collaboration with teams of engineers, managers, field crew, and legal.
 - Utilized VBA and Excel programming alongside transmission line rating engineering knowledge to design and build an auditable, automated FERC-881 steady-state line-rating analysis tool from scratch - integrating PLS-CADD structure data, conductor properties, and historical weather data with CIGRE-referenced seasonal rating methodology to compute normal and emergency ratings and critical-span summaries - reducing engineering hours threefold and costs by approx. $1.5M.
-- Utilizing in-depth knowledge of structural engineering and geotechnical engineering for custom-engineered solutions of transmission structures and drilled pier foundations with reference to ASCE, ACI, and FHWA to meet special needs.
-- Utilizing high-level knowledge of transmission line design to scope new transmission lines in collaboration with other engineering disciplines.
+- Utilized in-depth knowledge of structural engineering and geotechnical engineering for custom-engineered solutions of transmission structures and drilled pier foundations with reference to ASCE, ACI, and FHWA to meet special needs.
+- Utilized high-level knowledge of transmission line design to scope new transmission lines in collaboration with other engineering disciplines.
 - Employed excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, and transmission pole design aids.
 - Utilized transmission engineering knowledge and programming experience to generate company sag-tension standards for tree-wire.
-- Designing and reviewing drawings for tubular steel poles and drilled piers to withstand vertical and lateral loads.
-- Performing detail-oriented technical review of transmission standards and collaboration in their developments.
-- Initiating process improvement pipelines for transmission design processes and documentations.
+- Designed and reviewed drawings for tubular steel poles and drilled piers to withstand vertical and lateral loads.
+- Performed detail-oriented technical review of transmission standards and collaboration in their developments.
+- Initiated process improvement pipelines for transmission design processes and documentations.
 - Improved company standards and company procedures with detail-oriented reviews/QAQC.
 
 ---
