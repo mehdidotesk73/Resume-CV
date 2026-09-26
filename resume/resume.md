@@ -26,7 +26,7 @@ University of Colorado Boulder
 
 **Reliability & Standards Solutions Engineer II** — PacifiCorp · Jan 2025 – Present
 
-- Applied full-stack TypeScript and Python engineering to end-to-end design, build, and deploy a Foundry-based data management system concurrent to testing and production adoption - from backend pipelines through user-facing UIs - covering audit preparation, interdepartmental data collection, and queue-based processing pipelines.
+- Applied full-stack TypeScript and Python engineering to end-to-end design, build, and deploy a Foundry-based data management system, migrating the prototype FERC-881 and FAC-008 tools into the company's production solution - concurrent to testing and production adoption - from backend pipelines through user-facing UIs - covering audit preparation, interdepartmental data collection, and queue-based processing pipelines.
 - Owned end-to-end UX design for the Foundry-based system - including all interaction and workflow design via Foundry Workshop - continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users.
 - Architected a git-inspired version-control framework - a reusable pattern for system analysis lifecycle management within Foundry - supporting cloning, modification, and staged publication of facility analyses through department-specific review checkpoints, with automated resource tracking and validation.
 - Leveraging Spark and Polars, designed backend Python data pipelines to ingest, parse, and remediate enterprise-scale, imperfect legacy data spanning multiple database and spreadsheet sources, automating data cleanup and multi-source merging to reconcile records to production quality standards.
@@ -38,8 +38,9 @@ University of Colorado Boulder
 **Transmission Engineer I/II** — PacifiCorp · Jan 2023 – Jan 2025
 
 - Utilized high-level knowledge of transmission line design to scope new transmission lines in collaboration with other engineering disciplines.
-- Utilized in-depth knowledge of PLSCADD, L-PILE, NESC, and GO-95 for design of new power transmission lines and rebuilding/maintenance of existing lines in states of UT, WY, OR, WA, and CA in collaboration with teams of engineers, managers, field crew, and legal.
+- Utilized in-depth knowledge of PLSCADD, L-PILE, NESC, and GO-95 for design of new power transmission lines and rebuilding/maintenance of existing lines in six states in collaboration with teams of engineers, managers, field crew, and legal.
 - Utilized in-depth knowledge of structural engineering and geotechnical engineering for custom-engineered solutions of transmission structures and drilled pier foundations with reference to ASCE, ACI, and FHWA to meet special needs.
+- Overhauled the company's transmission structure library from legacy templates into modular, component-based PLS-POLE libraries, and designed a new class of circuit-swap structures for repositioning circuits on a double-circuit extra-high-voltage line with minimal increase to structure size, vetted across engineering and field operations to meet electrical and structural requirements.
 - Utilized VBA and Excel programming alongside transmission line rating engineering knowledge to design and build an auditable, automated FERC-881 steady-state line-rating analysis tool from scratch - integrating PLS-CADD structure data, conductor properties, and historical weather data with CIGRE-referenced seasonal rating methodology to compute normal and emergency ratings and critical-span summaries - reducing engineering hours threefold and costs by approx. $1.5M.
 - Employed excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, and transmission pole design aids.
 - Utilized transmission engineering knowledge and programming experience to generate company sag-tension standards for tree-wire.
