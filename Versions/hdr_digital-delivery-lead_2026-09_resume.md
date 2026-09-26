@@ -26,13 +26,12 @@ University of Colorado Boulder
 
 **Reliability & Standards Solutions Engineer II** — PacifiCorp · Jan 2025 – Present
 
-- Applied full-stack TypeScript and Python engineering to end-to-end design, build, and deploy a Foundry-based data management system, migrating the prototype FERC-881 and FAC-008 tools into the company's production solution - concurrent to testing and production adoption - from backend pipelines through user-facing UIs - covering audit preparation, interdepartmental data collection, and queue-based processing pipelines.
-- Applied VBA/Excel programming skills alongside IEEE equipment-rating knowledge to design and build a streamlined, user-friendly FAC-008 substation equipment rating tool from scratch, computing normal and emergency ratings and ranking limiting elements for substation equipment - including breakers, switches, capacitors, reactors, buses, jumpers, and transformers - from company standards and nameplate specifications.
+- Applied full-stack TypeScript and Python engineering to end-to-end design, build, and deploy a Foundry-based data management system, migrating the prototype FERC-881 and FAC-008 tools into the company's production solution - concurrent to testing and production adoption - from backend pipelines through user-facing UIs and UX design via Foundry Workshop - covering audit preparation, interdepartmental data collection, and queue-based processing pipelines.
+- Applied VBA/Excel programming skills alongside IEEE equipment-rating knowledge to design and build a streamlined, user-friendly FAC-008 substation equipment rating tool from scratch, computing normal and emergency ratings and ranking limiting elements for substation equipment from company standards and nameplate specifications.
 - Deployed AutoCAD experience and design architecture skills to implement AutoLISP one-line-drawing functionality to parse shape geometries and layer data - identifying transmission facilities and equipment, deducing line segment and equipment configurations, and exporting structured data to reconcile database records with engineering drawings.
 - Architected a git-inspired version-control framework - a reusable pattern for system analysis lifecycle management within Foundry - supporting cloning, modification, and staged publication of facility analyses through department-specific review checkpoints, with automated resource tracking and validation.
-- Owned end-to-end UX design for the Foundry-based system - including all interaction and workflow design via Foundry Workshop - continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users.
 - Leveraging Spark and Polars, designed backend Python data pipelines to ingest, parse, and remediate enterprise-scale, imperfect legacy data spanning multiple database and spreadsheet sources, automating data cleanup and multi-source merging to reconcile records to production quality standards.
-- Utilized knowledge of physics and numerical methods to implement IEEE-compliant thermal rating models in Python, solving the nonlinear ordinary-differential heat balance (solar heat gain, convective cooling, radiative heat loss, conductor resistance) through Runge-Kutta forward integration and Newton-Raphson inverse root-finding, vectorized at scale for static, dynamic, and transient line ratings within the platform.
+- Utilized knowledge of physics and numerical methods to implement IEEE-compliant thermal rating models in Python, solving the nonlinear ordinary-differential heat balance through Runge-Kutta forward integration and Newton-Raphson inverse root-finding, vectorized at scale for static, dynamic, and transient line ratings within the platform.
 - Applied geometric and spatial analysis methods to compute mutual-impedance candidate pairs, line-distance statistics, and line-to-line distance visualizations for parallel transmission corridors, integrated into platform UI graphs.
 
 **Transmission Engineer I/II** — PacifiCorp · Jan 2023 – Jan 2025
@@ -44,10 +43,8 @@ University of Colorado Boulder
 - Utilized high-level knowledge of transmission line design to scope new transmission lines in collaboration with other engineering disciplines.
 - Employed excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, and transmission pole design aids.
 - Utilized transmission engineering knowledge and programming experience to generate company sag-tension standards for tree-wire.
-- Designed and reviewed drawings for tubular steel poles and drilled piers to withstand vertical and lateral loads.
-- Performed detail-oriented technical review of transmission standards and collaboration in their developments.
-- Initiated process improvement pipelines for transmission design processes and documentations.
-- Improved company standards and company procedures with detail-oriented reviews/QAQC.
+- Designed and reviewed drawings for tubular steel poles and drilled piers to withstand vertical and lateral loads, and improved company standards and procedures through detail-oriented QAQC reviews.
+- Performed detail-oriented technical review of transmission standards, contributing to their development, and initiated process improvement pipelines for transmission design processes and documentation.
 
 ---
 
