@@ -234,17 +234,10 @@ application. This is a separate path from a normal checkpoint.
      against that `Versions/` copy locally, producing
      `Versions/<slug>_resume.pdf` and `Versions/<slug>_resume.md`.
    - Check the built PDF's page count. **Snapshots target 2 pages,
-     stricter than the master's 1.5–2.5.** If it runs over 2, tell the
-     user before going further: how many lines over (check what
-     actually spills onto the extra page, not just a page-count
-     guess), and one or two concrete ways to close the gap —
-     a specific bullet to rephrase/shorten, or a specific bullet/entry
-     that's a reasonable candidate to drop. Don't cut anything
-     yourself; per Content rules below, bullets are never removed
-     without explicit instruction. If testing a fix locally (e.g. to
-     confirm a proposed cut actually reaches 2 pages), use a scratch
-     copy, not the files being delivered, and report the verified
-     result rather than an estimate.
+     stricter than the master's 1.5–2.5.** If it runs over, follow the
+     Trimming to a page target loop below before going further. Don't
+     cut anything yourself; per Content rules below, bullets are never
+     removed without explicit instruction.
    - Delete the ephemeral `resume_draft.tex`/`.pdf`/`.md` as normal.
 4. Commit all three new `Versions/<slug>_resume.*` files on a feature
    branch and open a PR into `main` — same as every other change, Claude
@@ -263,6 +256,56 @@ same commit-and-PR path as everything else, not just a chat attachment.
 If, instead, the user decides a tailored draft should *become* the new
 master (rather than live as its own `Versions/` entry), that's just a
 normal checkpoint: copy the draft into `resume.tex` as usual.
+
+### Trimming to a page target
+
+Whenever a resume — master or a `Versions/` snapshot — needs to come
+back within its target, this is the standard loop, not an ad hoc
+back-and-forth:
+
+**1. Measure by content, not by page count.** The page-count number
+`pdfinfo` reports is misleading on its own: a PDF at "3 pages" might be
+two full pages plus one trailing word, or two pages plus most of a
+third entry — the fix is completely different in each case.
+   - Run `pdftotext -layout -f <last-page> -l <last-page> <file>.pdf -`
+     to see exactly what spilled onto the overflow page.
+   - For a precise number, compare total non-blank line counts
+     (`pdftotext -layout <file>.pdf - | grep -c '[^[:space:]]'`)
+     against a known-good version at the target length — this turns
+     "3 pages" into a concrete "5 lines over" or "1 word over."
+
+**2. Present a menu, apply nothing yet.** Once the overflow is known,
+propose concrete candidates before touching any file, covering both
+angles:
+   - **Simplify** — reword or shorten an individual bullet without
+     dropping any underlying claim.
+   - **Combine** — merge two or more short, thematically related
+     bullets into one. This often reclaims more space than trimming
+     any single bullet, since each bullet carries fixed overhead (the
+     marker, the line break) on top of its content — a cluster of
+     short one-line bullets is a better target than one long bullet.
+
+   Name specific bullets and give the exact proposed wording for each
+   option, so the user approves text, not a vague intention.
+
+**3. Apply only what's approved, nothing speculative.** Never apply a
+trim "to see if it's enough" and ask after the fact. Apply exactly the
+option(s) the user picked. Several approved trims from the same message
+can be applied together in one pass — the rule is against testing
+*unapproved* options, not against batching *approved* ones.
+
+**4. Re-verify after every apply, don't assume.** Rebuild and re-run
+the same precise measurement from step 1. A wording trim frequently
+lands inside existing line-wrap slack and saves nothing visible — only
+a cut that crosses a wrap boundary reclaims a physical line. If the
+target isn't reached yet, report the new exact remaining overflow and
+repeat from step 2.
+
+**5. Commit real progress as it happens.** A round of approved trims
+that measurably improves things but doesn't yet hit the target is still
+committable — commit it and continue the loop on what's left. Only
+discard uncommitted work if it was never approved (e.g. a speculative
+test edit made before the user weighed in).
 
 ---
 
