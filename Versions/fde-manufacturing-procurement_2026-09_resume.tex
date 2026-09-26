@@ -1,0 +1,185 @@
+% ============================================================
+%  Mehdi Eskandari-Ghadi — Resume
+%  Compile: pdflatex resume.tex  (or use the Makefile)
+% ============================================================
+\documentclass[10pt, letterpaper]{article}
+
+% --- Packages -----------------------------------------------
+\usepackage[margin=0.65in, top=0.55in, bottom=0.55in]{geometry}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}        % Times-like serif (similar to Cambria)
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+
+% --- Hyperlink styling --------------------------------------
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+% --- Layout helpers -----------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Section header with full-width rule beneath
+\newcommand{\rsection}[1]{%
+  \vspace{8pt}%
+  {\large\bfseries\MakeUppercase{#1}}%
+  \vspace{1pt}%
+  \hrule height 0.8pt%
+  \vspace{4pt}%
+}
+
+% Job/role line: title left, date right
+\newcommand{\jobline}[2]{%
+  \vspace{5pt}%
+  \noindent\textbf{#1}\hfill\textbf{#2}\par%
+  \vspace{1pt}%
+}
+
+% Subline (institution, location — plain italic)
+\newcommand{\subline}[1]{%
+  \vspace{-1pt}%
+  \noindent\textit{#1}\par%
+  \vspace{1pt}%
+}
+
+% Bullet list settings
+\newenvironment{rlist}{%
+  \begin{itemize}[leftmargin=1.4em, itemsep=1pt, topsep=2pt, parsep=0pt]%
+}{%
+  \end{itemize}%
+}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% --- Header -------------------------------------------------
+\begin{center}
+  {\LARGE\bfseries Mehdi Eskandari-Ghadi}\\[4pt]
+  mehdi.esk73@gmail.com\ $|$\ (303)378-1407\ $|$\ Federal Way, WA\\[2pt]
+  \href{http://www.linkedin.com/in/M-E-Ghadi}{www.linkedin.com/in/M-E-Ghadi}\ $|$\
+  Authorized to work in the U.S.\ $|$\ Sponsor not required
+\end{center}
+
+\vspace{2pt}
+
+% --- Education ----------------------------------------------
+\rsection{Education}
+
+\jobline{Civil Engineering Ph.D. (GPA 4.0)}{Boulder, CO}
+Engineering Science Focus \hfill 2016 -- 2021\\
+University of Colorado Boulder
+
+% --- Technical Skills ---------------------------------------
+\rsection{Technical Skills}
+
+\vspace{2pt}
+\begin{tabular}{@{}p{4cm}p{13cm}@{}}
+  \textbf{Programming}       & Python, TypeScript/JavaScript, VBA, MATLAB, AutoLISP \\[2pt]
+  \textbf{Platforms \& Data} & Palantir Foundry, Apache Spark, Polars, Pandas \\[2pt]
+  \textbf{Engineering}       & AutoCAD, PLSCADD, L-PILE, ABAQUS/LS-DYNA \\[2pt]
+  \textbf{Standards \& Tools} & NESC, GO-95, FERC-881, Git, Microsoft Office Suite, LaTeX \\
+\end{tabular}
+
+% --- Engineering Experience ---------------------------------
+\rsection{Engineering Experience}
+
+
+\jobline{Reliability \& Standards Solutions Engineer II}{Jan 2025 -- Present}
+\subline{PacifiCorp}
+\begin{rlist}
+  \item Applied full-stack TypeScript and Python engineering to end-to-end design, build, and deploy a Foundry-based data management system concurrent to testing and production adoption - from backend pipelines through user-facing UIs - covering audit preparation, interdepartmental data collection, and queue-based processing pipelines.
+  \item Leveraging Spark and Polars, designed backend Python data pipelines to ingest, parse, and remediate enterprise-scale, imperfect legacy data spanning multiple database and spreadsheet sources, automating data cleanup and multi-source merging to reconcile records to production quality standards.
+  \item Deployed AutoCAD experience and design architecture skills to implement AutoLISP one-line-drawing functionality to parse shape geometries and layer data - identifying transmission facilities and equipment, deducing line segment and equipment configurations, and exporting structured data to reconcile database records with engineering drawings.
+  \item Architected a git-inspired version-control framework - a reusable pattern for system analysis lifecycle management within Foundry - supporting cloning, modification, and staged publication of facility analyses through department-specific review checkpoints, with automated resource tracking and validation.
+  \item Owned end-to-end UX design for the Foundry-based system - including all interaction and workflow design via Foundry Workshop - continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users.
+  \item Applied VBA/Excel programming skills alongside IEEE equipment-rating knowledge to design and build a streamlined, user-friendly FAC-008 substation equipment rating tool from scratch, computing normal and emergency ratings and ranking limiting elements for substation equipment - including breakers, switches, capacitors, reactors, buses, jumpers, and transformers - from company standards and nameplate specifications.
+  \item Utilized knowledge of physics and numerical methods to implement IEEE-compliant thermal rating models in Python, solving the nonlinear ordinary-differential heat balance through Runge-Kutta forward integration and Newton-Raphson inverse root-finding, vectorized at scale for static, dynamic, and transient line ratings within the platform.
+  \item Applied geometric and spatial analysis methods to compute mutual-impedance candidate pairs, line-distance statistics, and line-to-line distance visualizations for parallel transmission corridors, integrated into platform UI graphs.
+\end{rlist}
+
+\jobline{Transmission Engineer I/II}{Jan 2023 -- Jan 2025}
+\subline{PacifiCorp}
+\begin{rlist}
+  \item Utilized VBA and Excel programming alongside transmission line rating engineering knowledge to design and build an auditable, automated FERC-881 steady-state line-rating tool from scratch - integrating PLS-CADD structure data, conductor properties, and historical weather data with CIGRE-referenced seasonal rating methodology to compute normal and emergency ratings and critical-span summaries - reducing engineering hours threefold and costs by \$1.5M.
+  \item Utilized high-level knowledge of transmission line design to scope new lines with other engineering disciplines.
+  \item Utilized in-depth knowledge of PLSCADD, L-PILE, NESC, and GO-95 for design of new power transmission lines and rebuilding/maintenance of existing lines across six Western states in collaboration with teams of engineers, managers, field crew, and legal.
+  \item Utilized structural/geotechnical engineering knowledge for custom-engineered transmission structures and drilled piers per ASCE, ACI, and FHWA standards.
+  \item Employed excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, and transmission pole design aids.
+  \item Utilized transmission engineering knowledge and programming experience to generate company sag-tension standards for tree-wire.
+  \item Designed and reviewed drawings for tubular steel poles and drilled piers to withstand vertical and lateral loads.
+  \item Performed detail-oriented technical review of transmission standards and collaboration in their developments.
+  \item Initiated process improvement pipelines for transmission design processes and documentations.
+  \item Improved company standards and company procedures with detail-oriented reviews/QAQC.
+\end{rlist}
+
+% --- Research Experience ------------------------------------
+\rsection{Research Experience}
+
+\noindent\textbf{Academic Research}
+
+\jobline{Graduate Research Assistant / Ph.D. Candidate}{Jun 2018 -- Jan 2023}
+\subline{University of Colorado Boulder, Boulder, CO}
+\begin{rlist}
+  \item Collaborated with a team of three senior researchers at the Lawrence Berkeley National Laboratory to investigate and develop mechanistic models for subcritical crack growth healing.
+  \item Utilized knowledge of fundamentals of fracture mechanics, fluid transport, and boundary element methods to develop a software that couples fields of mechanics and physics.
+  \item Merged expertise in research, programming, and engineering to investigate multiphysical and multiscale solid-fluid interactions (e.g., adsorption, surface tension, solvation pressure) in porous solids and develop a thermodynamics-poromechanics-based MATLAB software for ``adsorption-induced deformation of microporous material''.
+  \item Employed technical writing and illustrative skills to author 4 peer-reviewed publications in respected journals of JMPS, IJSS, and EFM.
+\end{rlist}
+
+\vspace{4pt}
+\noindent\textbf{Talks and Presentations}
+
+\jobline{EMI Virtual Conference 2021 and EMI Conference 2022}{May 2021 and May 2022}
+\begin{rlist}
+  \item Applied illustrative and verbal communication skills to deliver presentations titled ``A multi-scale theory explaining the initial shrinkage of micro-porous solid upon gas adsorption'' and ``A Multiphysical Surface-Force Based Fracture Theory for Subcritical Crack Growth in Surface-Reactive Environments'', followed by Q\&A from engineering and academic audience.
+  \item Received runner up award in the 2021 Student Poster Competition for poster presentation on sorption-induced deformation of porous material.
+\end{rlist}
+
+\jobline{Lawrence Berkeley National Laboratory BES}{Sep 2020 -- Jan 2023}
+\begin{rlist}
+  \item Presented regular scientific presentations on topic of crack propagation to teams of research professionals and senior scientists in the LBNL BES with diverse backgrounds in mechanics, physics, and chemistry.
+\end{rlist}
+
+% --- Teaching Experience ------------------------------------
+\rsection{Teaching Experience}
+
+\noindent\textbf{Teaching Assistantships/Tutoring}
+
+\jobline{Teaching Assistant / Tutor}{2014 -- 2019}
+\subline{University of Colorado Boulder, Boulder, CO \& University of Tehran, Tehran, Iran}
+\begin{rlist}
+  \item Presented class lectures and laboratory teaching sessions, held office hours and exam preparation sessions, prepared and graded exams and homework question sets, for courses of Advanced mechanics of materials and Dynamics.
+  \item Tutored students for FE exam with 100\% success rate.
+  \item Tailored teaching approach specific to different student learning styles and utilized CAD skills to enhance visualization and understanding.
+  \item Held office hours and graded homework, quizzes, and class projects for Structural Analysis II and Hydraulics of open channels as a Teaching Assistant at the University of Tehran, Fall 2014 and Fall 2015.
+\end{rlist}
+
+% --- Leadership Roles ---------------------------------------
+\rsection{Leadership Roles}
+
+\noindent\textbf{Mentorship}
+
+\jobline{Research Mentor}{Jan 2022 -- Jan 2023}
+\subline{University of Colorado Boulder, Boulder, CO}
+\begin{rlist}
+  \item Trained new Ph.D.\ students on fundamentals of mechanics, written and oral skills, and technical research.
+  \item Guided a research trainee through the modeling and simulation of beam bending in humidity actuators.
+\end{rlist}
+
+\jobline{President/Co-president --- Persian Student Organization, Boulder, CO}{Aug 2018 -- May 2019}
+\subline{University of Colorado Boulder, Boulder, CO}
+\begin{rlist}
+  \item Proposed, secured funding, planned, and oversaw student events in collaboration with industry, academia, businesses, and nonprofits.
+\end{rlist}
+
+\end{document}
