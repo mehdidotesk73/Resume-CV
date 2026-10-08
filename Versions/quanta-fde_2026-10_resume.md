@@ -50,7 +50,7 @@ www.linkedin.com/in/M-E-Ghadi | U.S. Permanent Resident, Authorized to work
 
 ## RESEARCH EXPERIENCE
 
-**Graduate Research Assistant / Ph.D. Candidate** — University of Colorado Boulder, Boulder, CO · Jun 2018 – Jan 2023
+**Graduate Research Assistant / Ph.D. Candidate / Post Doctorate** — University of Colorado Boulder, Boulder, CO · Jun 2018 – Jan 2023
 
 - Collaborated with a cross-functional team of senior researchers at the Lawrence Berkeley National Laboratory to investigate and develop mechanistic models for subcritical crack growth healing, applying fundamentals of fracture mechanics, fluid transport, and boundary element methods to develop computational software that couples fields of mechanics and physics.
 - Merged expertise in research, programming, and engineering to investigate multiphysical and multiscale solid-fluid interactions (e.g., adsorption, surface tension, solvation pressure) in porous solids and develop a thermodynamics-poromechanics-based MATLAB software for "adsorption-induced deformation of microporous material".
