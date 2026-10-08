@@ -40,7 +40,7 @@ www.linkedin.com/in/M-E-Ghadi | U.S. Permanent Resident, Authorized to work
 - Utilized high-level knowledge of transmission line design to scope new transmission lines in collaboration with other engineering disciplines.
 - Utilized in-depth knowledge of PLSCADD, L-PILE, NESC, and GO-95 for design of new power transmission lines and rebuilding/maintenance of existing lines in six states in collaboration with teams of engineers, managers, field crew, and legal.
 - Utilized in-depth knowledge of structural engineering and geotechnical engineering for custom-engineered solutions of transmission structures and drilled pier foundations with reference to ASCE, ACI, and FHWA to meet special needs.
-- Overhauled the company's transmission structure library from legacy templates into modular, component-based PLS-POLE libraries, and designed a new class of circuit-swap structures for repositioning circuits on a double-circuit extra-high-voltage line with minimal increase to structure size, vetted across engineering and field operations to meet electrical and structural requirements.
+- Overhauled company transmission structure library from legacy templates into modular, component-based PLS-POLE libraries, and designed a new class of circuit-swap structures to reposition circuits on a double-circuit extra-high-voltage line with minimal increase to structure size, vetted across engineering and field operations for electrical and structural requirements.
 - Utilized VBA and Excel programming alongside transmission line rating engineering knowledge to design and build an auditable, automated FERC-881 steady-state line-rating analysis tool from scratch - integrating PLS-CADD structure data, conductor properties, and historical weather data with CIGRE-referenced seasonal rating methodology to compute normal and emergency ratings and critical-span summaries - streamlining grid line data extraction, reducing engineering hours threefold.
 - Employed excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, transmission pole design aids, and company sag-tension standards for tree-wire.
 - Designed and reviewed drawings for tubular steel poles and drilled piers to withstand vertical and lateral loads, and improved company standards and procedures through detail-oriented QAQC reviews.
@@ -50,15 +50,11 @@ www.linkedin.com/in/M-E-Ghadi | U.S. Permanent Resident, Authorized to work
 
 ## RESEARCH EXPERIENCE
 
-**Academic Research**
-
 **Graduate Research Assistant / Ph.D. Candidate** — University of Colorado Boulder, Boulder, CO · Jun 2018 – Jan 2023
 
 - Collaborated with a cross-functional team of senior researchers at the Lawrence Berkeley National Laboratory to investigate and develop mechanistic models for subcritical crack growth healing, applying fundamentals of fracture mechanics, fluid transport, and boundary element methods to develop computational software that couples fields of mechanics and physics.
 - Merged expertise in research, programming, and engineering to investigate multiphysical and multiscale solid-fluid interactions (e.g., adsorption, surface tension, solvation pressure) in porous solids and develop a thermodynamics-poromechanics-based MATLAB software for "adsorption-induced deformation of microporous material".
 - Employed technical writing and illustrative skills to author 4 peer-reviewed publications in respected journals of JMPS, IJSS, and EFM.
-
-**Talks and Presentations**
 
 **EMI Virtual Conference 2021 and EMI Conference 2022** · May 2021 and May 2022
 
