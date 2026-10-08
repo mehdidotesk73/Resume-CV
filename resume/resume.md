@@ -16,7 +16,7 @@ University of Colorado Boulder
 ## TECHNICAL SKILLS
 
 **Programming:** Python, TypeScript/JavaScript, VBA, MATLAB, AutoLISP
-**Platforms & Data:** Palantir Foundry, Apache Spark, Polars, Pandas
+**Platforms & Data:** Palantir Foundry (Ontology, Pipeline Builder, Workshop, OSDK, AIP), Spark, Polars, Pandas
 **Engineering:** AutoCAD, PLSCADD, L-PILE, ABAQUS/LS-DYNA
 **Standards & Tools:** NESC, GO-95, FERC-881, Git, Microsoft Office Suite, LaTeX
 
@@ -27,8 +27,8 @@ University of Colorado Boulder
 **Reliability & Standards Solutions Engineer II** — PacifiCorp · Jan 2025 – Present
 
 - Applied full-stack TypeScript and Python engineering to end-to-end design, build, and deploy a Foundry-based data management system, migrating prototype FERC-881 line-rating and FAC-008 equipment-rating business logic into the company's production solution - concurrent to testing and production adoption - from backend pipelines through user-facing UIs - covering audit preparation, interdepartmental data collection, and queue-based processing pipelines.
-- Built a Foundry-based ecosystem to manage transmission facility and equipment records, track record modifications, and compute granular, operations-scale rating calculations, with external system interfacing delivered through automations, map interfaces, graphs, and other data solution UI elements; owned end-to-end UX design for the system via Foundry Workshop, continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users.
-- Directed AI coding agents with repository and Foundry Ontology access to write and edit functions and entire features through a full commit, tag, and pull-request workflow, coordinating agent-driven changes across multiple interdependent repositories while maintaining version and compatibility consistency.
+- Built a Foundry-based ecosystem, spanning an Ontology with 100+ Actions and Functions and 30+ Pipeline Builder pipelines, to manage transmission facility and equipment records, track record modifications, and compute granular, operations-scale rating calculations, with external system interfacing delivered through automations, map interfaces, graphs, and other data solution UI elements; owned end-to-end UX design for the system via Foundry Workshop, continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users.
+- Directed AI coding agents with repository and Foundry Ontology access to write and edit functions, entire features, and React-based custom Workshop widgets through a full commit, tag, and pull-request workflow, coordinating agent-driven changes across multiple interdependent repositories while maintaining version and compatibility consistency.
 - Built a reusable Python report-processing library and used it to power an LLM-based reporting pipeline via Palantir AIP, generating narrative reports on system modification changes and their system implications for administrative review and approval.
 - Architected a git-inspired version-control framework - a reusable pattern for system analysis lifecycle management within Foundry - supporting cloning, modification, and staged publication of facility analyses through department-specific review checkpoints, with automated resource tracking and validation.
 - Leveraging Spark and Polars, designed backend Python data pipelines to ingest, parse, and remediate enterprise-scale, imperfect legacy data spanning multiple database and spreadsheet sources, automating data cleanup and multi-source merging to reconcile records to production quality standards.
