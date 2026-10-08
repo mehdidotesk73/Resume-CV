@@ -1,7 +1,7 @@
 # Mehdi Eskandari-Ghadi
 
-mehdi.esk73@gmail.com | (303)378-1407 | Salt Lake City, UT
-www.linkedin.com/in/M-E-Ghadi | Authorized to work in the U.S. | Sponsor not required
+mehdi.esk73@gmail.com | (303)378-1407 | Federal Way, WA
+www.linkedin.com/in/M-E-Ghadi | U.S. Permanent Resident, Authorized to work
 
 ---
 
@@ -123,7 +123,7 @@ Calculus I — 20/20
 
 ## RESEARCH EXPERIENCE
 
-**Graduate Research Assistant / Ph.D. Candidate** — University of Colorado Boulder, Boulder, CO · Jun 2018 – Jan 2023
+**Graduate Research Assistant / Ph.D. Candidate / Postdoctoral Researcher** — University of Colorado Boulder, Boulder, CO · Jun 2018 – Jan 2023
 
 - Collaborated with a team of three senior researchers at the Lawrence Berkeley National Laboratory to investigate and develop mechanistic models for subcritical crack growth and crack healing, with reference to 400+ research and technical articles.
 - Investigated subcritical crack growth, crack healing, experimental apparatus, and utilization of optical birefringence techniques in fracture analysis with collaborators at LBNL.
