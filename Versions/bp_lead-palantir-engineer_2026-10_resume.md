@@ -14,7 +14,7 @@ www.linkedin.com/in/M-E-Ghadi | U.S. Permanent Resident, Authorized to work
 ## TECHNICAL SKILLS
 
 **Programming:** Python, TypeScript/JavaScript, VBA, MATLAB, AutoLISP
-**Platforms & Data:** Palantir Foundry (Ontology, Pipeline Builder, Workshop, OSDK, AIP), Apache Spark, Polars, Pandas
+**Platforms & Data:** Palantir Foundry (Ontology, Pipeline Builder, Workshop, OSDK, AIP), Spark, Polars, Pandas
 **Engineering:** AutoCAD, PLSCADD, L-PILE, ABAQUS/LS-DYNA
 **Standards & Tools:** NESC, GO-95, FERC-881, Git, Microsoft Office Suite, LaTeX
 
