@@ -64,20 +64,34 @@ Calculus I — 20/20
 
 ---
 
+## PROFESSIONAL CERTIFICATIONS
+
+**Deep Dive: Data Analysis in Contour** — Palantir Technologies · Oct 2026
+
+**Speedrun: Data Science Fundamentals** — Palantir Technologies · Oct 2026
+
+**Speedrun: Your First AIP Workflow** — Palantir Technologies · Oct 2026
+
+**Foundry & AIP Builder Foundations** — Palantir Technologies · Sep 2026
+
+**Speedrun: Your First End-to-End Workflow** — Palantir Technologies · Sep 2026
+
+---
+
 ## ENGINEERING EXPERIENCE
 
 **Reliability & Standards Software Engineer II** — PacifiCorp · Jan 2025 – Present
 
 - Applied full-stack TypeScript and Python engineering to design and implement the Palantir Foundry platform as the company's production solution, migrating prototype FERC-881 line-rating and FAC-008 equipment-rating business logic into an integrated system covering audit preparation, data management UIs, interdepartmental data collection, and queue-based processing pipelines.
-- Built a Foundry-based ecosystem for PacifiCorp, spanning an Ontology with 100+ Actions and Functions and 30+ Pipeline Builder pipelines, to manage transmission facility and equipment records, track and approve record modifications, and compute granular, operations-scale rating calculations, including external system interfacing and efficient data management workflows delivered through automations, map interfaces, graphs, and other data solution UI elements; owned end-to-end UX design for the system - including all interaction and workflow design via Foundry Workshop - continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users.
-- Directed AI coding agents with repository and Foundry Ontology access to write and edit functions and entire features - including large formatted Excel report generation, large-scale dataframe operations logic, and React-based custom Workshop widgets - through a full commit, tag, and pull-request workflow; coordinated agent-driven changes across multiple interdependent repositories that import one another as libraries, maintaining version and compatibility consistency across them.
-- Built a reusable Python report-processing library supporting multiple internal and external data exports, and used it to power an LLM-based reporting pipeline via Palantir AIP - traversing Foundry Ontology object sets into dataframes, formatting outputs into schema-versioned, typed data structures with a matching data legend, and applying system, task, and report-format prompts to generate narrative reports on facility modification changes and their rating implications for administrative review and approval prior to publishing.
+- Built a Foundry-based ecosystem for PacifiCorp, spanning an Ontology with 100+ Actions and Functions and 30+ Pipeline Builder pipelines, to manage transmission facility and equipment records, track and approve record modifications, and compute granular, operations-scale rating calculations, including external system interfacing and efficient data management workflows delivered through automations, map interfaces, graphs, and other data solution UI elements. Owned end-to-end UX design for the system, including all interaction and workflow design via Foundry Workshop, continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users.
+- Directed AI coding agents with repository and Foundry Ontology access by sequencing incremental implementations and large migrations to write and edit functions and entire features, including large formatted Excel report generation, large-scale dataframe operations logic, and React-based custom Workshop widgets, through a full commit, tag, and pull-request workflow. Coordinated agent-driven changes across multiple interdependent repositories that import one another as libraries, maintaining version and compatibility consistency across them.
+- Built a reusable Python report-processing library supporting multiple internal and external data exports, and used it to power an LLM-based reporting pipeline via Palantir AIP. The pipeline traverses Foundry Ontology object sets into dataframes, formats outputs into schema-versioned, typed data structures with a matching data legend, and applies system, task, and report-format prompts to generate narrative reports on facility modification changes and their rating implications for administrative review and approval prior to publishing. The reports are in active use to focus administrative review across data spread over legacy tables, files, engineering drawings, and internal apps.
 - Applied git-inspired version-control concepts for system analysis lifecycle management within Foundry, supporting cloning, modification, and staged publication of facility analyses through department-specific review checkpoints, with automated resource tracking and validation.
 - Leveraging Spark and Polars, designed backend Python data pipelines for large-scale ingestion, parsing, and health remediation of legacy spreadsheets, automating data cleanup and multi-source merging to bring records to quality standards.
 - Utilized knowledge of physics and numerical methods to build a reusable Python rating-calculation library implementing IEEE-compliant thermal rating models, solving the nonlinear ordinary-differential heat balance (solar heat gain, convective cooling, radiative heat loss, conductor resistance) through Runge-Kutta forward integration and Newton-Raphson inverse root-finding, vectorized at scale for static, dynamic, and transient line and equipment ratings within the platform.
-- Applied VBA/Excel programming skills alongside IEEE equipment-rating knowledge to design and build a streamlined, user-friendly FAC-008 substation equipment rating tool from scratch, computing normal and emergency ratings and ranking limiting elements for substation equipment - including breakers, switches, capacitors, reactors, buses, jumpers, and transformers - from company standards and nameplate specifications.
+- Applied VBA/Excel programming skills alongside IEEE equipment-rating knowledge to design and build a streamlined, user-friendly FAC-008 substation equipment rating tool from scratch. It computes normal and emergency ratings and ranks limiting elements for substation equipment, including breakers, switches, capacitors, reactors, buses, jumpers, and transformers, from company standards and nameplate specifications.
 - Applied geometric and spatial analysis methods to compute mutual-impedance candidate pairs, line-distance statistics, and line-to-line distance visualizations for parallel transmission corridors, integrated into platform UI graphs.
-- Deployed AutoCAD experience and design architecture skills to implement AutoLISP one-line-drawing functionality to parse shape geometries and layer data - identifying transmission facilities and equipment, deducing line segment and equipment configurations, and exporting structured data to reconcile database records with engineering drawings.
+- Deployed AutoCAD experience and problem breakdown skills to implement AutoLISP one-line-drawing parsers for shape geometries and layer data. The parsers identify transmission facilities and equipment, deduce line segment and equipment configurations, and export structured data to reconcile database records with engineering drawings.
 
 **Transmission Engineer II** — PacifiCorp · Feb 2024 – Jan 2025
 
@@ -91,7 +105,7 @@ Calculus I — 20/20
 - Utilizing in-depth knowledge of PLSCADD, L-PILE, NESC, and GO-95 for design of new power transmission lines and rebuilding/maintenance of existing lines in states of UT, WY, OR, WA, and CA in collaboration with teams of engineers, managers, field crew, and legal.
 - Utilizing in-depth knowledge of structural engineering and geotechnical engineering for custom-engineered solutions of transmission structures and drilled pier foundations with reference to ASCE, ACI, and FHWA to meet special needs.
 - Overhauled the company's transmission structure library from legacy templates into modular, component-based PLS-POLE libraries, and designed a new class of circuit-swap structures for repositioning circuits on a double-circuit extra-high-voltage line with minimal increase to structure size, vetted across engineering and field operations to meet electrical and structural requirements.
-- Utilized VBA and Excel programming alongside transmission line rating engineering knowledge to design and build an auditable, automated FERC-881 steady-state line-rating analysis tool from scratch - integrating PLS-CADD structure data, conductor properties, and historical weather data with CIGRE-referenced seasonal rating methodology to compute normal and emergency ratings and critical-span summaries - streamlining grid line data extraction, reducing engineering hours threefold and costs by approx. $1.5M, and initializing the Foundry datasets that the system later grew from.
+- Utilized VBA and Excel programming alongside transmission line rating engineering knowledge to design and build an auditable, automated FERC-881 steady-state line-rating analysis tool from scratch. This tool integrates PLS-CADD structure data, conductor properties, and historical weather data with CIGRE-referenced seasonal rating methodology to compute normal and emergency ratings and critical-span summaries. It streamlined grid line data extraction, reducing engineering hours threefold and costs by approx. $1.5M, and initialized the Foundry datasets that the system later grew from, for future system migration, validation, and automation.
 - Employed excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, and transmission pole design aids.
 - Utilized transmission engineering knowledge and programming experience to generate company sag-tension standards for tree-wire.
 - Improved company standards and company procedures with detail-oriented reviews/QAQC.
@@ -238,7 +252,7 @@ Calculus I — 20/20
 Python, TypeScript/JavaScript, MATLAB, VBA, AutoLISP, FORTRAN, C++, HTML/CSS, SQL, PHP, Pascal
 
 **Platforms & Frameworks**
-Palantir Foundry (Ontology, Pipeline Builder, Workshop, OSDK, AIP, Spark, Polars, TypeScript/Python pipelines), Flask, Django, Palantir Foundry UI
+Palantir Foundry (Ontology, Pipeline Builder, Contour, Workshop, OSDK, AIP, Spark, Polars, TypeScript/Python pipelines), Flask, Django, Palantir Foundry UI
 
 **Engineering Software**
 PLSCADD/PLS-TOWER, L-PILE, Autodesk AutoCAD, ABAQUS, LS-DYNA, ETABS, Plaxis, GeoStudio, SAP2000, SAFE, Civil3D, WaterGEMS, SewerCAD, StormCAD
