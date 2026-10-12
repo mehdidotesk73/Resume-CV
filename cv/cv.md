@@ -96,8 +96,8 @@ Calculus I — 20/20
 **Transmission Engineer II** — PacifiCorp · Feb 2024 – Jan 2025
 
 - Utilizing high-level knowledge of transmission line design to scope new transmission lines in collaboration with other engineering disciplines.
-- Initiating process improvement pipelines for transmission design processes and documentations.
-- Performing detail-oriented technical review of transmission standards and collaboration in their developments.
+- Initiating process improvement pipelines for transmission design processes and documentation.
+- Performing detail-oriented technical review of transmission standards, contributing to their development.
 - Continued all duties from Transmission Engineer I position.
 
 **Transmission Engineer I** — PacifiCorp · Jan 2023 – Feb 2024
@@ -106,7 +106,7 @@ Calculus I — 20/20
 - Utilizing in-depth knowledge of structural engineering and geotechnical engineering for custom-engineered solutions of transmission structures and drilled pier foundations with reference to ASCE, ACI, and FHWA to meet special needs.
 - Overhauled the company's transmission structure library from legacy templates into modular, component-based PLS-POLE libraries, and designed a new class of circuit-swap structures for repositioning circuits on a double-circuit extra-high-voltage line with minimal increase to structure size, vetted across engineering and field operations to meet electrical and structural requirements.
 - Utilized VBA and Excel programming alongside transmission line rating engineering knowledge to design and build an auditable, automated FERC-881 steady-state line-rating analysis tool from scratch. This tool integrates PLS-CADD structure data, conductor properties, and historical weather data with CIGRE-referenced seasonal rating methodology to compute normal and emergency ratings and critical-span summaries. It streamlined grid line data extraction, reducing engineering hours threefold and costs by approx. $1.5M, and initialized the Foundry datasets that the system later grew from, for future system migration, validation, and automation.
-- Employed excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, and transmission pole design aids.
+- Employed Excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, and transmission pole design aids.
 - Utilized transmission engineering knowledge and programming experience to generate company sag-tension standards for tree-wire.
 - Improved company standards and company procedures with detail-oriented reviews/QAQC.
 - Designing and reviewing drawings for tubular steel poles and drilled piers to withstand vertical and lateral loads.
@@ -141,7 +141,7 @@ Calculus I — 20/20
 
 - Collaborated with a team of senior researchers at the Lawrence Berkeley National Laboratory to investigate and develop mechanistic models for subcritical crack growth and crack healing, with reference to 400+ research and technical articles.
 - Investigated subcritical crack growth, crack healing, experimental apparatus, and utilization of optical birefringence techniques in fracture analysis with collaborators at LBNL.
-- Utilized knowledge of fundamentals of fracture mechanics, fluid transport, and boundary element methods to develop a software that couples fields of mechanics and physics.
+- Utilized knowledge of fundamentals of fracture mechanics, fluid transport, and boundary element methods to develop software that couples fields of mechanics and physics.
 - Investigated the theory and engineering application of multiphysical and multiscale solid-fluid interactions (e.g., adsorption, surface tension, solvation pressure) in micro/meso/macroporous solids.
 - Developed, implemented, and validated a poromechanical model for adsorption-induced deformation of microporous material in MATLAB, based on thermodynamics, poromechanics, and surface mechanics.
 - Employed technical writing and illustrative skills for preparation of 4 peer-reviewed publications in journals of JMPS, IJSS, and EFM.
@@ -181,7 +181,7 @@ Calculus I — 20/20
 
 **EMI Virtual Conference 2021 and EMI Conference 2022** · May 2021 and May 2022
 
-- Applied illustrative and verbal communication skills to deliver presentations titled "A multi-scale theory explaining the initial shrinkage of micro-porous solid upon gas adsorption" and "A Multiphysical Surface-Force Based Fracture Theory for Subcritical Crack Growth in Surface-Reactive Environments", followed by Q&A from engineering and academic audience.
+- Applied illustrative and verbal communication skills to deliver presentations titled "A multi-scale theory explaining the initial shrinkage of micro-porous solid upon gas adsorption" and "A Multiphysical Surface-Force Based Fracture Theory for Subcritical Crack Growth in Surface-Reactive Environments", followed by Q&A from engineering and academic audiences.
 - Received runner up award in the 2021 Student Poster Competition for poster presentation on sorption-induced deformation of porous material.
 
 **Lawrence Berkeley National Laboratory BES — Regular Presentations** · Sep 2020 – Jan 2023

@@ -27,7 +27,7 @@ University of Colorado Boulder
 **Reliability & Standards Solutions Engineer II** — PacifiCorp · Jan 2025 – Present
 
 - Applied full-stack TypeScript and Python engineering to end-to-end design, build, and deploy a Foundry-based data management system, migrating prototype FERC-881 line-rating and FAC-008 equipment-rating business logic into the company's production solution, spanning backend pipelines, user-facing UIs, audit preparation, interdepartmental data collection, and queue-based processing pipelines concurrent to testing and production adoption.
-- Built a Foundry-based ecosystem, spanning an Ontology with 100+ Actions and Functions and 30+ Pipeline Builder pipelines, to manage transmission facility and equipment records, track record modifications, and compute granular, operations-scale rating calculations, with external system interfacing delivered through automations, map interfaces, graphs, and other data solution UI elements; owned end-to-end UX design for the system via Foundry Workshop, continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users.
+- Built a Foundry-based ecosystem, spanning an Ontology with 100+ Actions and Functions and 30+ Pipeline Builder pipelines, to manage transmission facility and equipment records, track record modifications, and compute granular, operations-scale rating calculations, with external system interfacing delivered through automations, map interfaces, graphs, and other data solution UI elements. Owned end-to-end UX design for the system via Foundry Workshop, continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users.
 - Directed AI coding agents with repository and Foundry Ontology access by sequencing incremental implementations and large migrations to write and edit functions, entire features, and React-based custom Workshop widgets through a full commit, tag, and pull-request workflow, coordinating agent-driven changes across multiple interdependent repositories while maintaining version and compatibility consistency.
 - Built a reusable Python report-processing library and used it to power an LLM-based reporting pipeline via Palantir AIP, generating narrative reports on system modification changes and their system implications, in active use to focus administrative review across data spread over legacy tables, files, engineering drawings, and internal apps.
 - Architected a git-inspired version-control framework, a reusable pattern for system analysis lifecycle management within Foundry. It supports cloning, modification, and staged publication of facility analyses through department-specific review checkpoints, with automated resource tracking and validation.
@@ -44,11 +44,10 @@ University of Colorado Boulder
 - Utilized in-depth knowledge of structural engineering and geotechnical engineering for custom-engineered solutions of transmission structures and drilled pier foundations with reference to ASCE, ACI, and FHWA to meet special needs.
 - Overhauled the company's transmission structure library from legacy templates into modular, component-based PLS-POLE libraries, and designed a new class of circuit-swap structures for repositioning circuits on a double-circuit extra-high-voltage line with minimal increase to structure size, vetted across engineering and field operations to meet electrical and structural requirements.
 - Utilized VBA and Excel programming alongside transmission line rating engineering knowledge to design and build an auditable, automated FERC-881 steady-state line-rating analysis tool from scratch. This tool integrates PLS-CADD structure data, conductor properties, and historical weather data with CIGRE-referenced seasonal rating methodology to compute normal and emergency ratings and critical-span summaries. It streamlined grid line data extraction, reducing engineering hours threefold, and initialized the Foundry datasets for future system migration, validation, and automation.
-- Employed excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, and transmission pole design aids.
+- Employed Excel programming and data analysis skills to develop automated tools for deep foundation design, construction package generation, and transmission pole design aids.
 - Utilized transmission engineering knowledge and programming experience to generate company sag-tension standards for tree-wire.
 - Designed and reviewed drawings for tubular steel poles and drilled piers to withstand vertical and lateral loads.
-- Performed detail-oriented technical review of transmission standards and collaboration in their developments.
-- Initiated process improvement pipelines for transmission design processes and documentations.
+- Performed detail-oriented technical review of transmission standards, contributing to their development, and initiated process improvement pipelines for transmission design processes and documentation.
 - Improved company standards and company procedures with detail-oriented reviews/QAQC.
 
 ---
@@ -60,7 +59,7 @@ University of Colorado Boulder
 **Graduate Research Assistant / Ph.D. Candidate / Postdoctoral Researcher** — University of Colorado Boulder, Boulder, CO · Jun 2018 – Jan 2023
 
 - Collaborated with a team of senior researchers at the Lawrence Berkeley National Laboratory to investigate and develop mechanistic models for subcritical crack growth healing.
-- Utilized knowledge of fundamentals of fracture mechanics, fluid transport, and boundary element methods to develop a software that couples fields of mechanics and physics.
+- Utilized knowledge of fundamentals of fracture mechanics, fluid transport, and boundary element methods to develop software that couples fields of mechanics and physics.
 - Merged expertise in research, programming, and engineering to investigate multiphysical and multiscale solid-fluid interactions (e.g., adsorption, surface tension, solvation pressure) in porous solids and develop a thermodynamics-poromechanics-based MATLAB software for "adsorption-induced deformation of microporous material".
 - Employed technical writing and illustrative skills to author 4 peer-reviewed publications in respected journals of JMPS, IJSS, and EFM.
 
@@ -68,7 +67,7 @@ University of Colorado Boulder
 
 **EMI Virtual Conference 2021 and EMI Conference 2022** · May 2021 and May 2022
 
-- Applied illustrative and verbal communication skills to deliver presentations titled "A multi-scale theory explaining the initial shrinkage of micro-porous solid upon gas adsorption" and "A Multiphysical Surface-Force Based Fracture Theory for Subcritical Crack Growth in Surface-Reactive Environments", followed by Q&A from engineering and academic audience.
+- Applied illustrative and verbal communication skills to deliver presentations titled "A multi-scale theory explaining the initial shrinkage of micro-porous solid upon gas adsorption" and "A Multiphysical Surface-Force Based Fracture Theory for Subcritical Crack Growth in Surface-Reactive Environments", followed by Q&A from engineering and academic audiences.
 - Received runner up award in the 2021 Student Poster Competition for poster presentation on sorption-induced deformation of porous material.
 
 **Lawrence Berkeley National Laboratory BES** · Sep 2020 – Jan 2023
