@@ -4,23 +4,15 @@ Professional Reflections
 
 ---
 
-## Learning Unfamiliar Domains Through Conversation and Curiosity
+## Learning Unfamiliar Domains Through Curiosity, Conversation, and Problem Breakdown
 
 *Supports: Solutions Engineer, Forward Deployed Engineer, Deployment Strategist*
 
 Over the past decade, I have gained expertise spanning physics-based research, power line design, and software development. This unusual background is what defines my strength in solutions engineering: while I am not the world's leading expert on a tightly defined subject, I lean on conversation and curiosity to gain the level of expertise needed to be a reliable asset.
 
-When I sit with individuals and teams from different backgrounds, I start by drawing out their own sense of value and expertise. I then pull from my past experiences of problem breakdown to tackle what needs to be learned within a new domain. Applying this pattern has allowed me to amplify my business connection with other teams and shape solutions that address their pain points and become a component of their business excellence.
+My PhD research, focused on multi-physics material behavior, taught me how to break complex problems into smaller, approachable pieces. It taught me how a highly detailed focus on a problem and the big picture can be reconciled into cohesive, multi-scale insight, and it taught me how to absorb knowledge at different scales, efficiently and usefully. I applied these skills in the transmission engineering role I took on next, where I quickly picked up design principles and addressed practical challenges.
 
----
-
-## Breaking Down Complex Problems Across Scales
-
-*Supports: Forward Deployed Engineer, Solutions Engineer, Deployment Strategist*
-
-My PhD research, focused on multi-physics material behavior, taught me how to break complex problems into smaller, approachable pieces. It taught me how a highly detailed focus on a problem and the big picture can be reconciled into cohesive, multi-scale insight, and it taught me how to absorb knowledge at different scales, efficiently and usefully.
-
-I applied these skills in the transmission engineering role I took on next, where I quickly picked up design principles and addressed practical challenges.
+When I sit with individuals and teams from different backgrounds, I start by drawing out their own sense of value and expertise. I then draw on that same habit of problem breakdown to tackle what needs to be learned within a new domain. Applying this pattern has allowed me to amplify my business connection with other teams and shape solutions that address their pain points and become a component of their business excellence.
 
 ---
 
