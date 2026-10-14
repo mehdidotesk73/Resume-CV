@@ -1,0 +1,170 @@
+% ============================================================
+%  Mehdi Eskandari-Ghadi — Resume
+%  Compile: pdflatex resume.tex  (or use the Makefile)
+% ============================================================
+\documentclass[10pt, letterpaper]{article}
+
+% --- Packages -----------------------------------------------
+\usepackage[margin=0.65in, top=0.55in, bottom=0.55in]{geometry}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}        % Times-like serif (similar to Cambria)
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+
+% --- Hyperlink styling --------------------------------------
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black
+}
+
+% --- Layout helpers -----------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Section header with full-width rule beneath
+\newcommand{\rsection}[1]{%
+  \vspace{8pt}%
+  {\large\bfseries\MakeUppercase{#1}}%
+  \vspace{1pt}%
+  \hrule height 0.8pt%
+  \vspace{4pt}%
+}
+
+% Job/role line: title left, date right
+\newcommand{\jobline}[2]{%
+  \vspace{5pt}%
+  \noindent\textbf{#1}\hfill\textbf{#2}\par%
+  \vspace{1pt}%
+}
+
+% Subline (institution, location — plain italic)
+\newcommand{\subline}[1]{%
+  \vspace{-1pt}%
+  \noindent\textit{#1}\par%
+  \vspace{1pt}%
+}
+
+% Bullet list settings
+\newenvironment{rlist}{%
+  \begin{itemize}[leftmargin=1.4em, itemsep=1pt, topsep=2pt, parsep=0pt]%
+}{%
+  \end{itemize}%
+}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% --- Header -------------------------------------------------
+\begin{center}
+  {\LARGE\bfseries Mehdi Eskandari-Ghadi}\\[4pt]
+  mehdi.esk73@gmail.com\ $|$\ (303)378-1407\ $|$\ Federal Way, WA\\[2pt]
+  \href{http://www.linkedin.com/in/M-E-Ghadi}{www.linkedin.com/in/M-E-Ghadi}\ $|$\
+  U.S. Permanent Resident, Authorized to work
+\end{center}
+
+\vspace{2pt}
+
+% --- Education ----------------------------------------------
+\rsection{Education}
+
+\jobline{Civil Engineering Ph.D. (GPA 4.0), Engineering Science Focus}{2016 -- 2021}
+\subline{University of Colorado Boulder, Boulder, CO}
+
+% --- Technical Skills ---------------------------------------
+\rsection{Technical Skills}
+
+\vspace{2pt}
+\begin{tabular}{@{}p{3.4cm}p{14.4cm}@{}}
+  \textbf{Programming}       & Python, TypeScript/JavaScript, Git, VBA, MATLAB, AutoLISP \\[2pt]
+  \textbf{Platforms \& Data} & Palantir Foundry (Ontology, Pipeline Builder, Contour, Workshop, OSDK, AIP), Spark, Polars, Pandas \\[2pt]
+  \textbf{Engineering}       & AutoCAD, PLSCADD, L-PILE, ABAQUS/LS-DYNA \\[2pt]
+  \textbf{Standards \& Tools} & NESC, GO-95, FERC-881, Microsoft Office Suite, LaTeX \\[2pt]
+  \textbf{Certifications}    & Palantir Foundry \& AIP Builder Foundations; Data Analysis in Contour (Deep Dive); Your First AIP Workflow, Your First End-to-End Workflow, and Data Science Fundamentals (Speedruns) \\
+\end{tabular}
+
+% --- Engineering Experience ---------------------------------
+\rsection{Engineering Experience}
+
+
+\jobline{Reliability \& Standards Solutions Engineer II --- PacifiCorp}{Jan 2025 -- Present}
+\begin{rlist}
+  \item Designed, built, and deployed the company's Foundry-based facility rating data management system end to end with full-stack TypeScript and Python, migrating prototype FERC-881 line-rating and FAC-008 equipment-rating business logic into production. The system spans backend and queue-based processing pipelines, user-facing applications, audit preparation, and interdepartmental data collection, delivered concurrently with testing and production adoption.
+  \item Built an enterprise, operations-scale Foundry ecosystem on an Ontology redesigned for semantic clarity and workflow object types, with 100+ Actions and Functions and 30+ Pipeline Builder pipelines. It manages transmission facility and equipment records and their modifications, computes granular rating calculations and geometric mutual-impedance analyses for parallel transmission corridors, and interfaces with external systems through automations, maps, graphs, and other UI elements.
+  \item Designed backend Python data pipelines in Spark and Polars to ingest, parse, and remediate enterprise-scale, imperfect legacy data from multiple database and spreadsheet sources, automating cleanup and multi-source merging to reconcile records to production quality standards.
+  \item Architected a reusable, git-inspired version-control framework for system analysis lifecycle management in Foundry: facility analyses are cloned, modified, and published in stages through department-specific review checkpoints, with automated resource tracking and validation.
+  \item Owned end-to-end UX design in Foundry Workshop, continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users, with shared layouts, color schemes, and reusable components (map, facility table, metric cards) across all modules. Drove adoption by training PacifiCorp engineers on the system and holding weekly feature-update meetings.
+  \item Built a reusable Python report-processing library and used it to power LLM-based reporting via Palantir AIP, generating narrative reports on system modification changes and their system implications, in active use to focus administrative review across data spread over legacy tables, files, engineering drawings, and internal apps.
+  \item Directed AI coding agents with repository and Foundry Ontology access by sequencing incremental implementations and large migrations to write and edit functions, entire features, and React-based custom Workshop widgets through a full commit, tag, and pull-request workflow, coordinating agent-driven changes across multiple interdependent repositories while maintaining version and compatibility consistency.
+  \item Developed a reusable Python library implementing physics-based, IEEE-compliant thermal rating models, numerically solving the nonlinear heat balance through Runge-Kutta integration and Newton-Raphson root-finding, vectorized at scale for static, dynamic, and transient line and equipment ratings.
+  \item Deployed AutoCAD experience and problem breakdown skills to implement AutoLISP one-line-drawing parsers. The parsers identify transmission facilities and equipment, deduce line segment and equipment configurations, and export structured data to reconcile database records with engineering drawings.
+  \item Designed and built a streamlined FAC-008 substation equipment rating tool from scratch in VBA/Excel, applying IEEE equipment-rating knowledge to compute normal and emergency ratings and rank limiting elements from company standards and nameplate specifications.
+\end{rlist}
+
+\jobline{Transmission Engineer I/II --- PacifiCorp}{Jan 2023 -- Jan 2025}
+\begin{rlist}
+  \item Designed new transmission lines and rebuild and maintenance projects for existing lines in six states with PLSCADD, L-PILE, NESC, and GO-95, collaborating with teams of engineers, managers, field crews, and legal.
+  \item Scoped new transmission lines with other engineering disciplines, and applied structural and geotechnical engineering to custom-engineer transmission structures and drilled pier foundations for special needs per ASCE, ACI, and FHWA.
+  \item Overhauled the company's transmission structure library from legacy templates into modular, component-based PLS-POLE libraries, and designed a new class of circuit-swap structures for repositioning circuits on a double-circuit extra-high-voltage line with minimal increase to structure size, vetted across engineering and field operations to meet electrical and structural requirements.
+  \item Utilized VBA and Excel programming alongside transmission line rating engineering knowledge to design and build an auditable, automated FERC-881 steady-state line-rating analysis tool from scratch. This tool integrates PLS-CADD structure data, conductor properties, and historical weather data with CIGRE-referenced seasonal rating methodology to compute normal and emergency ratings and critical-span summaries. It streamlined grid line data extraction, reducing engineering hours threefold, and initialized the Foundry datasets for future system migration, validation, and automation.
+  \item Developed automated Excel tools for deep foundation design, construction package generation, transmission pole design aids, and company sag-tension standards for tree-wire.
+  \item Designed and reviewed drawings for tubular steel poles and drilled piers to withstand vertical and lateral loads, and improved company standards and procedures through detail-oriented QAQC reviews.
+  \item Performed detail-oriented technical review of transmission standards, contributing to their development, and initiated process improvement pipelines for transmission design processes and documentation.
+\end{rlist}
+
+% --- Research Experience ------------------------------------
+\rsection{Research Experience}
+
+\jobline{Graduate Research Assistant / Ph.D. Candidate / Postdoctoral Researcher}{Jun 2018 -- Jan 2023}
+\subline{University of Colorado Boulder, Boulder, CO}
+\begin{rlist}
+  \item Collaborated with a team of senior researchers at the Lawrence Berkeley National Laboratory to investigate and develop mechanistic models for subcritical crack growth healing, applying fundamentals of fracture mechanics, fluid transport, and boundary element methods to develop computational software that couples fields of mechanics and physics.
+  \item Investigated multiphysical, multiscale solid-fluid interactions (adsorption, surface tension, solvation pressure) in porous solids and developed thermodynamics-poromechanics-based MATLAB software modeling adsorption-induced deformation of microporous material.
+  \item Authored 4 peer-reviewed publications in JMPS, IJSS, and EFM.
+\end{rlist}
+
+\jobline{EMI Virtual Conference 2021 and EMI Conference 2022}{May 2021 and May 2022}
+\begin{rlist}
+  \item Applied illustrative and verbal communication skills to deliver presentations titled ``A multi-scale theory explaining the initial shrinkage of micro-porous solid upon gas adsorption'' and ``A Multiphysical Surface-Force Based Fracture Theory for Subcritical Crack Growth in Surface-Reactive Environments'' to engineering and academic audiences.
+  \item Received the runner-up award in the 2021 Student Poster Competition for a poster on sorption-induced deformation of porous material.
+\end{rlist}
+
+\jobline{Lawrence Berkeley National Laboratory BES}{Sep 2020 -- Jan 2023}
+\begin{rlist}
+  \item Gave regular scientific presentations on crack propagation to research professionals and senior scientists at LBNL BES with backgrounds in mechanics, physics, and chemistry.
+\end{rlist}
+
+% --- Teaching Experience ------------------------------------
+\rsection{Teaching Experience}
+
+\jobline{Teaching Assistant / Tutor}{2014 -- 2019}
+\subline{University of Colorado Boulder, Boulder, CO \& University of Tehran, Tehran, Iran}
+\begin{rlist}
+  \item Presented class lectures and laboratory teaching sessions, held office hours and exam preparation sessions, prepared and graded exams, homework, and projects, for courses of Advanced mechanics of materials, Dynamics, Structural Analysis II, and Hydraulics of open channels.
+  \item Tutored students for the FE exam with a 100\% success rate.
+\end{rlist}
+
+% --- Leadership Roles ---------------------------------------
+
+\rsection{Leadership Roles}
+
+\jobline{Research Mentor}{Jan 2022 -- Jan 2023}
+\subline{University of Colorado Boulder, Boulder, CO}
+\begin{rlist}
+  \item Trained new Ph.D.\ students on fundamentals of mechanics, written and oral skills, and technical research, and guided a research trainee through the modeling and simulation of beam bending in humidity actuators.
+\end{rlist}
+
+\jobline{President/Co-president --- Persian Student Organization, Boulder, CO}{Aug 2018 -- May 2019}
+\subline{University of Colorado Boulder, Boulder, CO}
+\begin{rlist}
+  \item Proposed, secured funding, planned, and oversaw student events with industry, academic, business, and nonprofit partners.
+\end{rlist}
+
+\end{document}
