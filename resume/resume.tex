@@ -83,34 +83,33 @@ University of Colorado Boulder
 \rsection{Technical Skills}
 
 \vspace{2pt}
-\begin{tabular}{@{}p{4cm}p{13cm}@{}}
-  \textbf{Programming}       & Python, TypeScript/JavaScript, VBA, MATLAB, AutoLISP \\[2pt]
-  \textbf{Platforms \& Data} & Palantir Foundry (Ontology, Pipeline Builder, Workshop, OSDK, AIP), Spark, Polars, Pandas \\[2pt]
+\begin{tabular}{@{}p{3.4cm}p{14.4cm}@{}}
+  \textbf{Programming}       & Python, TypeScript/JavaScript, Git, VBA, MATLAB, AutoLISP \\[2pt]
+  \textbf{Platforms \& Data} & Palantir Foundry (Ontology, Pipeline Builder, Contour, Workshop, OSDK, AIP), Spark, Polars, Pandas \\[2pt]
   \textbf{Engineering}       & AutoCAD, PLSCADD, L-PILE, ABAQUS/LS-DYNA \\[2pt]
-  \textbf{Standards \& Tools} & NESC, GO-95, FERC-881, Git, Microsoft Office Suite, LaTeX \\
+  \textbf{Standards \& Tools} & NESC, GO-95, FERC-881, Microsoft Office Suite, LaTeX \\[2pt]
+  \textbf{Certifications}    & Palantir Foundry \& AIP Builder Foundations; Data Analysis in Contour (Deep Dive); Your First AIP Workflow, Your First End-to-End Workflow, and Data Science Fundamentals (Speedruns) \\
 \end{tabular}
 
 % --- Engineering Experience ---------------------------------
 \rsection{Engineering Experience}
 
 
-\jobline{Reliability \& Standards Solutions Engineer II}{Jan 2025 -- Present}
-\subline{PacifiCorp}
+\jobline{Reliability \& Standards Solutions Engineer II --- PacifiCorp}{Jan 2025 -- Present}
 \begin{rlist}
-  \item Applied full-stack TypeScript and Python engineering to end-to-end design, build, and deploy a Foundry-based data management system, migrating prototype FERC-881 line-rating and FAC-008 equipment-rating business logic into the company's production solution, spanning backend pipelines, user-facing UIs, audit preparation, interdepartmental data collection, and queue-based processing pipelines concurrent to testing and production adoption.
-  \item Built a Foundry-based ecosystem, spanning an Ontology with 100+ Actions and Functions and 30+ Pipeline Builder pipelines, to manage transmission facility and equipment records, track record modifications, and compute granular, operations-scale rating calculations, with external system interfacing delivered through automations, map interfaces, graphs, and other data solution UI elements. Owned end-to-end UX design for the system via Foundry Workshop, continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users. Drove adoption by training PacifiCorp engineers on the system and holding weekly feature-update meetings.
+  \item Designed, built, and deployed the company's Foundry-based facility rating data management system end to end with full-stack TypeScript and Python, migrating prototype FERC-881 line-rating and FAC-008 equipment-rating business logic into production. The system spans backend and queue-based processing pipelines, user-facing applications, audit preparation, and interdepartmental data collection, delivered concurrently with testing and production adoption.
+  \item Built a Foundry-based ecosystem, spanning an Ontology with 100+ Actions and Functions and 30+ Pipeline Builder pipelines, to manage transmission facility and equipment records, track record modifications, and compute granular, operations-scale rating calculations, with external system interfacing delivered through automations, map interfaces, graphs, and other data solution UI elements. Owned end-to-end UX design in Foundry Workshop, continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users. Drove adoption by training PacifiCorp engineers on the system and holding weekly feature-update meetings.
   \item Directed AI coding agents with repository and Foundry Ontology access by sequencing incremental implementations and large migrations to write and edit functions, entire features, and React-based custom Workshop widgets through a full commit, tag, and pull-request workflow, coordinating agent-driven changes across multiple interdependent repositories while maintaining version and compatibility consistency.
-  \item Built a reusable Python report-processing library and used it to power an LLM-based reporting pipeline via Palantir AIP, generating narrative reports on system modification changes and their system implications, in active use to focus administrative review across data spread over legacy tables, files, engineering drawings, and internal apps.
-  \item Architected a git-inspired version-control framework, a reusable pattern for system analysis lifecycle management within Foundry. It supports cloning, modification, and staged publication of facility analyses through department-specific review checkpoints, with automated resource tracking and validation.
-  \item Leveraging Spark and Polars, designed backend Python data pipelines to ingest, parse, and remediate enterprise-scale, imperfect legacy data spanning multiple database and spreadsheet sources, automating data cleanup and multi-source merging to reconcile records to production quality standards.
-  \item Utilized knowledge of physics and numerical methods to build a reusable Python rating-calculation library implementing IEEE-compliant thermal rating models, solving the nonlinear ordinary-differential heat balance (solar heat gain, convective cooling, radiative heat loss, conductor resistance) through Runge-Kutta forward integration and Newton-Raphson inverse root-finding, vectorized at scale for static, dynamic, and transient line and equipment ratings within the platform.
-  \item Applied VBA/Excel programming skills alongside IEEE equipment-rating knowledge to design and build a streamlined, user-friendly FAC-008 substation equipment rating tool from scratch. It computes normal and emergency ratings and ranks limiting elements for substation equipment, including breakers, switches, capacitors, reactors, buses, jumpers, and transformers, from company standards and nameplate specifications.
+  \item Built a reusable Python report-processing library and used it to power LLM-based reporting via Palantir AIP, generating narrative reports on system modification changes and their system implications, in active use to focus administrative review across data spread over legacy tables, files, engineering drawings, and internal apps.
+  \item Architected a reusable, git-inspired version-control framework for system analysis lifecycle management in Foundry: facility analyses are cloned, modified, and published in stages through department-specific review checkpoints, with automated resource tracking and validation.
+  \item Designed backend Python data pipelines in Spark and Polars to ingest, parse, and remediate enterprise-scale, imperfect legacy data from multiple database and spreadsheet sources, automating cleanup and multi-source merging to reconcile records to production quality standards.
+  \item Developed a reusable Python library implementing physics-based, IEEE-compliant thermal rating models, numerically solving the nonlinear ordinary-differential heat balance (solar heat gain, convective cooling, radiative heat loss, conductor resistance) through Runge-Kutta forward integration and Newton-Raphson inverse root-finding, vectorized at scale for static, dynamic, and transient line and equipment ratings within the platform.
+  \item Designed and built a streamlined, user-friendly FAC-008 substation equipment rating tool from scratch in VBA/Excel, applying IEEE equipment-rating knowledge to compute normal and emergency ratings and rank limiting elements for breakers, switches, capacitors, reactors, buses, jumpers, and transformers from company standards and nameplate specifications.
   \item Applied geometric and spatial analysis methods to compute mutual-impedance candidate pairs, line-distance statistics, and line-to-line distance visualizations for parallel transmission corridors, integrated into platform UI graphs.
   \item Deployed AutoCAD experience and problem breakdown skills to implement AutoLISP one-line-drawing parsers. The parsers identify transmission facilities and equipment, deduce line segment and equipment configurations, and export structured data to reconcile database records with engineering drawings.
 \end{rlist}
 
-\jobline{Transmission Engineer I/II}{Jan 2023 -- Jan 2025}
-\subline{PacifiCorp}
+\jobline{Transmission Engineer I/II --- PacifiCorp}{Jan 2023 -- Jan 2025}
 \begin{rlist}
   \item Utilized high-level knowledge of transmission line design to scope new transmission lines in collaboration with other engineering disciplines.
   \item Utilized in-depth knowledge of PLSCADD, L-PILE, NESC, and GO-95 for design of new power transmission lines and rebuilding/maintenance of existing lines in six states in collaboration with teams of engineers, managers, field crew, and legal.
@@ -127,8 +126,6 @@ University of Colorado Boulder
 % --- Research Experience ------------------------------------
 \rsection{Research Experience}
 
-\noindent\textbf{Academic Research}
-
 \jobline{Graduate Research Assistant / Ph.D. Candidate / Postdoctoral Researcher}{Jun 2018 -- Jan 2023}
 \subline{University of Colorado Boulder, Boulder, CO}
 \begin{rlist}
@@ -137,9 +134,6 @@ University of Colorado Boulder
   \item Merged expertise in research, programming, and engineering to investigate multiphysical and multiscale solid-fluid interactions (e.g., adsorption, surface tension, solvation pressure) in porous solids and develop a thermodynamics-poromechanics-based MATLAB software for ``adsorption-induced deformation of microporous material''.
   \item Employed technical writing and illustrative skills to author 4 peer-reviewed publications in respected journals of JMPS, IJSS, and EFM.
 \end{rlist}
-
-\vspace{4pt}
-\noindent\textbf{Talks and Presentations}
 
 \jobline{EMI Virtual Conference 2021 and EMI Conference 2022}{May 2021 and May 2022}
 \begin{rlist}
@@ -155,8 +149,6 @@ University of Colorado Boulder
 % --- Teaching Experience ------------------------------------
 \rsection{Teaching Experience}
 
-\noindent\textbf{Teaching Assistantships/Tutoring}
-
 \jobline{Teaching Assistant / Tutor}{2014 -- 2019}
 \subline{University of Colorado Boulder, Boulder, CO \& University of Tehran, Tehran, Iran}
 \begin{rlist}
@@ -168,8 +160,6 @@ University of Colorado Boulder
 
 % --- Leadership Roles ---------------------------------------
 \rsection{Leadership Roles}
-
-\noindent\textbf{Mentorship}
 
 \jobline{Research Mentor}{Jan 2022 -- Jan 2023}
 \subline{University of Colorado Boulder, Boulder, CO}
