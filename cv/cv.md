@@ -49,6 +49,7 @@ Calculus I — 20/20
 
 ## HONORS AND CERTIFICATES
 
+- Featured in PacifiCorp's Engineers Week spotlight, "PacifiCorp engineers are making a difference" (February 2024)
 - Engineering Mechanics Institute (EMI) Conference award: Runner up in the 2021 Poromechanics Committee Student Poster Competition
 - The Doctoral Assistantship for Excellence from University of Colorado, Boulder
 - Honorary Admission for Graduate Study from the University of Tehran

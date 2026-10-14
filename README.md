@@ -8,6 +8,7 @@ plain-text Markdown (for LinkedIn, job application forms, etc).
 ```
 resume/     resume.tex, its built resume.pdf / resume.md, and .build/ (LaTeX byproducts)
 cv/         cv.tex, its built cv.pdf / cv.md, and .build/
+reflections/  reflections.tex and its built reflections.md (career reflections for cover letters)
 Versions/   dated PDF snapshots
 scripts/    build tooling (see below)
 ```
@@ -22,9 +23,12 @@ python scripts/tex_to_pdf.py resume/resume.tex
 python scripts/tex_to_pdf.py cv/cv.tex
 python scripts/tex_to_markdown.py resume/resume.tex
 python scripts/tex_to_markdown.py cv/cv.tex
+python scripts/tex_to_markdown.py reflections/reflections.tex
 ```
 
-Each writes its output next to the source file.
+Each writes its output next to the source file. Only `reflections.md` is
+tracked for the reflections; a local `reflections.pdf` preview is
+gitignored.
 
 ## Editing
 

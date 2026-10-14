@@ -1,20 +1,26 @@
 #!/usr/bin/env python3
-"""Convert a resume/CV .tex file into the house-style plain-text Markdown
-described in README.md (for pasting into LinkedIn, job application forms,
-etc).
+"""Convert a resume/CV/reflections .tex file into the house-style plain-text
+Markdown described in README.md (for pasting into LinkedIn, job application
+forms, etc).
 
 Usage:
     python scripts/tex_to_markdown.py resume/resume.tex
     python scripts/tex_to_markdown.py cv/cv.tex
+    python scripts/tex_to_markdown.py reflections/reflections.tex
 
 Writes a .md file next to the source .tex file.
 
 This is a small hand-rolled parser, not a generic LaTeX-to-Markdown engine
 (e.g. pandoc). The source documents only ever use a handful of custom
 macros -- \\rsection, \\jobline, \\subline, the rlist/publist list
-environments, plus a couple of plain tabular tables -- so a general-purpose
-converter would need just as much custom filtering to hit this specific
-house style as this script does directly, without the extra dependency.
+environments, plus a couple of plain tabular tables, and \\reflection in
+the reflections document -- so a general-purpose converter would need just
+as much custom filtering to hit this specific house style as this script
+does directly, without the extra dependency.
+
+Prose after a \\reflection heading keeps its paragraph breaks (blank lines
+in the source); everywhere else, as before, a run of plain text collapses
+onto one line per \\\\ line break.
 
 Known simplification: within the Education section, \\jobline's second
 argument is a location ("Boulder, CO") rather than a date, so it's rendered
@@ -139,7 +145,8 @@ def parse_tabular(content: str) -> list[str]:
 # --------------------------------------------------------------- tokenizing
 
 _TOKEN_RE = re.compile(
-    r"\\rsection\{(?P<rsection>[^{}]*)\}"
+    r"\\reflection\{(?P<refl_title>[^{}]*)\}\{(?P<refl_roles>[^{}]*)\}"
+    r"|\\rsection\{(?P<rsection>[^{}]*)\}"
     r"|\\jobline\{(?P<job1>[^{}]*)\}\{(?P<job2>[^{}]*)\}"
     r"|\\subline\{(?P<subline>[^{}]*)\}"
     r"|\\begin\{rlist\}(?P<rlist>.*?)\\end\{rlist\}"
@@ -159,7 +166,9 @@ def tokenize(body: str) -> list[tuple]:
             events.append(("text", gap))
         pos = m.end()
 
-        if m.group("rsection") is not None:
+        if m.group("refl_title") is not None:
+            events.append(("reflection", m.group("refl_title"), m.group("refl_roles")))
+        elif m.group("rsection") is not None:
             events.append(("rsection", m.group("rsection")))
         elif m.group("job1") is not None:
             events.append(("jobline", m.group("job1"), m.group("job2")))
@@ -214,10 +223,24 @@ def render_jobline(title: str, date: str, subline: str | None, section: str | No
 def render_body(events: list[tuple]) -> str:
     blocks: list[str] = []
     current_section: str | None = None
+    in_reflection = False
     i, n = 0, len(events)
     while i < n:
         kind = events[i][0]
-        if kind == "rsection":
+        if kind == "reflection":
+            _, title, roles = events[i]
+            in_reflection = True
+            blocks.append("---")
+            blocks.append(f"## {block_text(title)}")
+            blocks.append(f"*Supports: {block_text(roles)}*")
+            i += 1
+        elif kind == "text" and in_reflection:
+            for para in re.split(r"\n\s*\n", events[i][1]):
+                rendered = render_text_block(para)
+                if rendered:
+                    blocks.append(rendered)
+            i += 1
+        elif kind == "rsection":
             title = block_text(events[i][1])
             current_section = title
             blocks.append("---")

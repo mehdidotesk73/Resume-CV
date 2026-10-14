@@ -51,12 +51,13 @@ jobs:
           python scripts/tex_to_pdf.py cv/cv.tex
           python scripts/tex_to_markdown.py resume/resume.tex
           python scripts/tex_to_markdown.py cv/cv.tex
+          python scripts/tex_to_markdown.py reflections/reflections.tex
 
       - name: Commit rebuilt outputs onto the PR branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resume/resume.pdf resume/resume.md cv/cv.pdf cv/cv.md
+          git add resume/resume.pdf resume/resume.md cv/cv.pdf cv/cv.md reflections/reflections.md
           git diff --staged --quiet || git commit -m "Rebuild PDF & markdown from .tex sources"
           git push origin HEAD:${{ github.head_ref }}
 
@@ -76,6 +77,6 @@ jobs:
               output: {
                 title: "Build succeeded",
                 summary:
-                  "resume.pdf, cv.pdf, resume.md, and cv.md were rebuilt from the .tex sources and are up to date on this branch.",
+                  "resume.pdf, cv.pdf, resume.md, cv.md, and reflections.md were rebuilt from the .tex sources and are up to date on this branch.",
               },
             });

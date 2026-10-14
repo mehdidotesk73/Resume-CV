@@ -1,7 +1,7 @@
 # Resume & CV — Editing Workflow
 
-Operating instructions for editing `resume.tex`/`cv.tex` in this repo.
-For a plain repo-layout overview, see README.md.
+Operating instructions for editing `resume.tex`/`cv.tex`/`reflections.tex`
+in this repo. For a plain repo-layout overview, see README.md.
 
 ## Files
 
@@ -16,6 +16,11 @@ cv/
 ├── cv_draft.tex          ← working copy, created alongside resume_draft.tex
 ├── cv.pdf
 └── cv.md
+reflections/
+├── reflections.tex        ← master professional reflections (see "Professional
+│                            reflections" below); edited only through its three modes
+├── reflections_draft.tex  ← working copy during an editing session
+└── reflections.md         ← built via scripts/tex_to_markdown.py; no PDF is tracked
 Versions/
 └── <slug>_resume.{tex,pdf,md}  ← position-specific tailored resume snapshots;
                                    built and committed by Claude directly, never
@@ -38,7 +43,8 @@ scripts/
 
 `main` is protected: it only takes changes through a pull request. CI
 (`.github/workflows/build.yml`) installs TeX and rebuilds `resume.pdf`,
-`cv.pdf`, `resume.md`, and `cv.md` directly onto every PR branch, so by
+`cv.pdf`, `resume.md`, `cv.md`, and `reflections.md` directly onto every
+PR branch, so by
 the time a PR is merged `main` already carries the finished build as
 part of the merge commit — there's no separate post-merge build step,
 and nothing is ever pushed to `main` directly.
@@ -309,6 +315,91 @@ test edit made before the user weighed in).
 
 ---
 
+## Professional reflections
+
+`reflections/reflections.tex` holds first-person reflections on the
+user's capabilities, ways of working, and career direction: the soft
+skills that a CV bullet can't carry. Its main use is writing cover
+letters (see below).
+
+### Structure
+- Each topic is one `\reflection{Capability}{Roles supported}` followed
+  by one to a few paragraphs of plain prose, separated by blank lines.
+- The first argument names the capability the reflection shows (e.g.
+  "Bridging Subject-Matter Experts and Technology"). The second lists
+  the roles it supports, most relevant first (e.g. "Solutions Engineer,
+  Forward Deployed Engineer, Deployment Strategist").
+- First person, in the user's voice. No bullets, and no dash-interrupted
+  phrasing: use commas, semicolons, colons, or separate sentences.
+- Content rules below apply: nothing the user hasn't said, no invented
+  outcomes. Facts mentioned in passing must agree with the CV.
+
+### Classifying a write-up
+The user will often describe something that is part reflection and part
+new experience. Split it and say which part went where:
+- **Approach, soft skills, motivation** → a reflection (Append mode).
+- **Hard skills, accomplishments, recognitions, tools, numbers** → the
+  CV and resume, through "Adding a new experience" above, including its
+  questions. Never move these into the CV on the strength of a
+  reflection alone.
+
+### Editing modes
+Every change to an existing reflections file is exactly one of these
+three modes. Name the mode when proposing, show the exact proposed text,
+and write to `reflections_draft.tex` only after the user approves.
+
+1. **Append.** Add a new reflection, or a new paragraph to an existing
+   one. Existing text is never altered in this mode. It usually starts
+   with the user describing something that qualifies as a reflection.
+2. **Surgical modification.** Tighten the phrasing of one existing
+   reflection. Per round:
+   - at most **7 alterations**, each a change to a word, phrase, or
+     sentence, listed individually as before → after;
+   - together touching no more than **20% of that reflection's
+     content**, measured in words over its paragraphs (not the title or
+     roles line): words removed or replaced plus words inserted, divided
+     by the reflection's word count before the round. Measure with a
+     word-level diff (e.g. Python `difflib`) and report the percentage
+     with the proposal;
+   - the meaning stays the same: same claims, same facts.
+   Rounds can follow one another, each within these limits. Anything
+   larger needs a Reorganization, or an explicit rewrite request.
+3. **Reorganization.** One of:
+   - **A. Merge** two or more reflections that share significant
+     content, insight, purpose, or topic into one. Keep every distinct
+     point and remove only true duplication. The merged reflection gets
+     a title and roles line that cover all of its parts. This is the
+     usual reorganization once several topics have been appended and
+     tightened.
+   - **B. Split** one reflection into two when it serves topics that
+     each carry career meaning on their own, and could be combined
+     independently with other reflections for a role. Less common.
+   Propose with the rationale and the full resulting text.
+
+### Session mechanics
+Same draft → checkpoint → PR flow as the resume and CV. Copy
+`reflections.tex` → `reflections_draft.tex`, edit the draft, and at the
+checkpoint copy it back, delete the draft, commit
+`reflections/reflections.tex`, push, and open a PR. CI rebuilds
+`reflections/reflections.md` onto the PR branch. When one write-up
+changes both the reflections and the CV/resume, both changes can share
+one branch and PR.
+
+## Cover letters
+
+Write cover letters from three sources:
+- **The job description:** what the role needs.
+- **The CV and resume:** the facts and evidence. Every factual claim in
+  a letter (roles, tools, numbers, outcomes) must trace back to one of
+  them.
+- **The reflections:** voice, approach, and motivation. Pick the
+  reflections whose roles line fits the posting.
+
+Keep to one page, follow the structure and tone of the user's earlier
+letters when they're available, and use the same no-dashes style.
+
+---
+
 ## Content rules
 
 - Do not invent, embellish, or infer experience the user hasn't provided.
@@ -336,6 +427,8 @@ test edit made before the user weighed in).
 - Sub-institution line: `\subline{}`
 - Bullet list: `\begin{rlist} \item ... \end{rlist}`
 - Publication list (CV only, numbered): `\begin{publist} \item ... \end{publist}`
+- Reflection topic (reflections only): `\reflection{Capability}{Roles supported}`,
+  followed by paragraphs separated by blank lines
 - Escape special characters: `\$`, `\%`, `\&`, `\#`
 - En dash for ranges: `--` (renders as –)
 - Smart quotes: `` ``quoted'' `` (renders as "quoted")
