@@ -95,6 +95,7 @@ Calculus I — 20/20
 - Architected a reusable, git-inspired version-control framework for system analysis lifecycle management in Foundry: facility analyses are cloned, modified, and published in stages through department-specific review checkpoints, with automated resource tracking and validation.
 - Wrote implementation plans with system architecture for platform features. For complex workflows such as the git-inspired version-control framework, defined the overall design, information flow, and edge cases before detailing step-by-step implementation.
 - Built data reliability safeguards: dataset primary key checks, validation rules, monitoring panels flagging missing object links, and pre-run validation previews for resource-consuming tasks.
+- Wrote unit and end-to-end tests for the platform's code.
 - Designed backend Python data pipelines in Spark and Polars to ingest, parse, and remediate enterprise-scale, imperfect legacy data from multiple database and spreadsheet sources, automating cleanup and multi-source merging to reconcile records to production quality standards.
 - Reviewed and debugged other engineers' data pipeline logic and data processing code.
 - Developed a reusable Python library implementing physics-based, IEEE-compliant thermal rating models, numerically solving the nonlinear ordinary-differential heat balance (solar heat gain, convective cooling, radiative heat loss, conductor resistance) through Runge-Kutta forward integration and Newton-Raphson inverse root-finding, vectorized at scale for static, dynamic, and transient line and equipment ratings within the platform.
@@ -155,6 +156,7 @@ Calculus I — 20/20
 - Utilized knowledge of fundamentals of fracture mechanics, fluid transport, and boundary element methods to develop software that couples fields of mechanics and physics.
 - Investigated the theory and engineering application of multiphysical and multiscale solid-fluid interactions (e.g., adsorption, surface tension, solvation pressure) in micro/meso/macroporous solids.
 - Developed, implemented, and validated a poromechanical model for adsorption-induced deformation of microporous material in MATLAB, based on thermodynamics, poromechanics, and surface mechanics.
+- Ran parametric studies to test model sensitivity.
 - Employed technical writing and illustrative skills for preparation of 4 peer-reviewed publications in journals of JMPS, IJSS, and EFM.
 
 **Research and Implementation of granular media constitutive models** — University of Colorado Boulder, Boulder, CO · 2016–2018
