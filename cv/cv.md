@@ -81,7 +81,7 @@ Calculus I — 20/20
 
 ## ENGINEERING EXPERIENCE
 
-**Reliability & Standards Software Engineer II** — PacifiCorp · Jan 2025 – Present
+**Reliability & Standards Engineer II (Palantir Foundry)** — PacifiCorp · Jan 2025 – Present
 
 - Designed, built, and deployed the company's Foundry-based facility rating data management system end to end with full-stack TypeScript and Python, migrating prototype FERC-881 line-rating and FAC-008 equipment-rating business logic into production as an integrated system. The system spans backend and queue-based processing pipelines, user-facing applications and data management UIs, audit preparation, and interdepartmental data collection, delivered concurrently with testing and production adoption.
 - Built a Foundry-based ecosystem for PacifiCorp, spanning an Ontology with 100+ Actions and Functions and 30+ Pipeline Builder pipelines, to manage transmission facility and equipment records, track and approve record modifications, and compute granular, operations-scale rating calculations, including external system interfacing and efficient data management workflows delivered through automations, map interfaces, graphs, and other data solution UI elements. Owned end-to-end UX design in Foundry Workshop, including all interaction and workflow design, continuously identifying friction points and iterating on layout and information architecture to keep complex, multi-source engineering workflows simple and intuitive for end users.
