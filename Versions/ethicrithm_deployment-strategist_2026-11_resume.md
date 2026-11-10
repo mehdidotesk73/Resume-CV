@@ -23,7 +23,7 @@ www.linkedin.com/in/M-E-Ghadi | U.S. Permanent Resident, Authorized to work
 
 ## ENGINEERING EXPERIENCE
 
-**System Modeling Principal Engineer (Palantir Foundry) — PacifiCorp** · Jan 2025 – Present
+**System Modeling Engineer / Principal Engineer (Palantir Foundry) — PacifiCorp** · Jan 2025 – Present
 
 - Designed, built, and deployed the company's Foundry-based facility rating data management system end to end with full-stack TypeScript and Python, owning its architecture, implementation plans, and delivery, and migrating prototype FERC-881 line-rating and FAC-008 equipment-rating business logic into production. The system spans backend and queue-based processing pipelines, user-facing applications, audit preparation, and interdepartmental data collection, delivered concurrently with testing and production adoption.
 - Built an enterprise, operations-scale Foundry ecosystem on an Ontology redesigned for semantic clarity and workflow object types, with 100+ Actions and Functions and 30+ Pipeline Builder pipelines. It manages transmission facility and equipment records and their modifications, computes granular rating calculations and geometric mutual-impedance analyses for parallel transmission corridors, and interfaces with external systems through automations, maps, graphs, and other UI elements.

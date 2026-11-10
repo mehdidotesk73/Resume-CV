@@ -22,7 +22,7 @@ www.linkedin.com/in/M-E-Ghadi | U.S. Permanent Resident, Authorized to work
 
 ## ENGINEERING EXPERIENCE
 
-**System Modeling Principal Engineer (Palantir Foundry) — PacifiCorp** · Jan 2025 – Present
+**System Modeling Engineer / Principal Engineer (Palantir Foundry) — PacifiCorp** · Jan 2025 – Present
 
 - Developed a reusable Python library implementing physics-based, IEEE-compliant thermal rating models, numerically solving the nonlinear heat balance through Runge-Kutta integration and Newton-Raphson root-finding, vectorized at scale for static, dynamic, and transient line and equipment ratings. Implemented seasonal ambient temperature analysis over 30 years of daily weather data across thousands of miles of power lines.
 - Designed, built, and deployed the company's Foundry-based facility rating data management system end to end with full-stack TypeScript and Python, owning its architecture, implementation plans, and delivery, and migrating prototype FERC-881 line-rating and FAC-008 equipment-rating business logic into production. The system spans backend and queue-based processing pipelines, user-facing applications, audit preparation, and interdepartmental data collection, delivered concurrently with testing and production adoption.
